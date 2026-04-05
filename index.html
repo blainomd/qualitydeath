@@ -190,6 +190,455 @@
       color: #888;
     }
 
+    /* Interactive Conversation Tool */
+    .conversation-tool {
+      background: #fff;
+      border-radius: 8px;
+      padding: 40px 32px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .conversation-tool .privacy-notice {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+      padding: 10px 14px;
+      background: #f9faf8;
+      border-radius: 4px;
+      border-left: 2px solid #6B8F5E;
+    }
+
+    .conversation-tool .progress-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 36px;
+    }
+
+    .conversation-tool .progress-dot {
+      flex: 1;
+      height: 3px;
+      background: #e5e5e5;
+      border-radius: 2px;
+      transition: background 0.4s ease;
+    }
+
+    .conversation-tool .progress-dot.completed {
+      background: #6B8F5E;
+    }
+
+    .conversation-tool .progress-dot.active {
+      background: #8aad7e;
+    }
+
+    .question-screen {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .question-screen.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .question-screen.fade-out {
+      display: block;
+      opacity: 0;
+    }
+
+    .question-number {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6B8F5E;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .question-text {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+    }
+
+    .question-why {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .question-explanation {
+      font-size: 13px;
+      color: #999;
+      margin-top: 16px;
+      line-height: 1.6;
+      padding: 12px 14px;
+      background: #fafafa;
+      border-radius: 4px;
+    }
+
+    .conversation-tool textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      resize: vertical;
+      transition: border-color 0.2s;
+      background: #fafafa;
+    }
+
+    .conversation-tool textarea:focus {
+      outline: none;
+      border-color: #6B8F5E;
+      background: #fff;
+    }
+
+    .conversation-tool input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #333;
+      transition: border-color 0.2s;
+      background: #fafafa;
+    }
+
+    .conversation-tool input[type="text"]:focus {
+      outline: none;
+      border-color: #6B8F5E;
+      background: #fff;
+    }
+
+    .conversation-tool select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #333;
+      background: #fafafa;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .conversation-tool select:focus {
+      outline: none;
+      border-color: #6B8F5E;
+    }
+
+    .proxy-fields {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .proxy-fields input {
+      flex: 2;
+    }
+
+    .proxy-fields select {
+      flex: 1;
+    }
+
+    .option-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #333;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      line-height: 1.5;
+    }
+
+    .option-btn:hover {
+      border-color: #6B8F5E;
+      background: #f5f7f4;
+    }
+
+    .option-btn.selected {
+      border-color: #6B8F5E;
+      background: #f0f5ee;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .option-btn.multi-select.selected {
+      border-color: #6B8F5E;
+      background: #f0f5ee;
+    }
+
+    .multi-hint {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .btn-back {
+      padding: 10px 20px;
+      border: none;
+      background: none;
+      color: #888;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .btn-back:hover {
+      color: #555;
+    }
+
+    .btn-next {
+      padding: 12px 28px;
+      border: none;
+      background: #6B8F5E;
+      color: #fff;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-next:hover {
+      background: #5a7a4f;
+    }
+
+    .btn-next:disabled {
+      background: #ccc;
+      cursor: default;
+    }
+
+    .btn-start-over {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #666;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-start-over:hover {
+      border-color: #999;
+      color: #333;
+    }
+
+    /* Results screen */
+    .results-screen {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .results-screen.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .results-header h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .results-date {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .results-section {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .results-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .results-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6B8F5E;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .results-value {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .results-proxy {
+      padding: 16px 18px;
+      background: #f5f7f4;
+      border-radius: 6px;
+      border-left: 3px solid #6B8F5E;
+      margin-bottom: 24px;
+    }
+
+    .results-proxy .results-label {
+      margin-bottom: 4px;
+    }
+
+    .results-proxy .proxy-name {
+      font-size: 17px;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .results-proxy .proxy-relationship {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .results-legal-notice {
+      padding: 16px 18px;
+      background: #fffbf0;
+      border-radius: 6px;
+      border-left: 3px solid #c9a84c;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .results-legal-notice strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .results-conversation-prompt {
+      padding: 20px;
+      background: #f5f7f4;
+      border-radius: 6px;
+      margin: 28px 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .results-conversation-prompt strong {
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .results-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .btn-print {
+      display: inline-block;
+      padding: 12px 28px;
+      border: none;
+      background: #6B8F5E;
+      color: #fff;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-print:hover {
+      background: #5a7a4f;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 14px;
+      }
+      .container {
+        max-width: 100%;
+        padding: 20px;
+      }
+      section:not(#conversation-section),
+      .sep,
+      footer,
+      .nav-buttons,
+      .results-actions,
+      .privacy-notice,
+      .progress-bar,
+      .question-screen {
+        display: none !important;
+      }
+      #conversation-section {
+        margin: 0;
+      }
+      #conversation-section h2 {
+        display: none;
+      }
+      .conversation-tool {
+        border: none;
+        padding: 0;
+      }
+      .results-screen.visible {
+        display: block !important;
+        opacity: 1 !important;
+      }
+      .results-legal-notice {
+        border: 1px solid #c9a84c;
+      }
+      .results-proxy {
+        border: 1px solid #6B8F5E;
+      }
+    }
+
     @media (max-width: 480px) {
       .container {
         padding: 48px 20px 80px;
@@ -201,6 +650,18 @@
 
       section {
         margin-bottom: 48px;
+      }
+
+      .conversation-tool {
+        padding: 28px 20px;
+      }
+
+      .question-text {
+        font-size: 18px;
+      }
+
+      .proxy-fields {
+        flex-direction: column;
       }
     }
   </style>
@@ -329,6 +790,225 @@
 
     <span class="sep"></span>
 
+    <section id="conversation-section">
+      <h2>Start Your Conversation</h2>
+      <p>This guided experience walks you through the questions that matter most. It takes about 10 minutes. At the end, you'll have a summary you can print and share with your family.</p>
+
+      <div class="conversation-tool">
+        <div class="privacy-notice">
+          Nothing you enter here is stored, sent, or shared. This runs entirely in your browser. When you close this page, everything disappears.
+        </div>
+
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-dot" data-step="0"></div>
+          <div class="progress-dot" data-step="1"></div>
+          <div class="progress-dot" data-step="2"></div>
+          <div class="progress-dot" data-step="3"></div>
+          <div class="progress-dot" data-step="4"></div>
+          <div class="progress-dot" data-step="5"></div>
+          <div class="progress-dot" data-step="6"></div>
+          <div class="progress-dot" data-step="7"></div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="question-screen visible" data-question="0" id="q0">
+          <div class="question-number">Question 1 of 8</div>
+          <div class="question-text">What matters most to you in your daily life right now?</div>
+          <div class="question-why">This helps frame everything that follows. Your values drive your care preferences.</div>
+          <textarea id="answer-values" placeholder="Take your time. There's no right answer. What brings you joy, meaning, or peace?"></textarea>
+          <div class="nav-buttons">
+            <span></span>
+            <button class="btn-next" onclick="nextQuestion(0)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-screen" data-question="1" id="q1">
+          <div class="question-number">Question 2 of 8</div>
+          <div class="question-text">If you couldn't speak for yourself, who would you trust to make medical decisions for you?</div>
+          <div class="question-why">This person is called your healthcare proxy. They should know your wishes.</div>
+          <div class="proxy-fields">
+            <input type="text" id="answer-proxy-name" placeholder="Their name">
+            <select id="answer-proxy-relationship">
+              <option value="" disabled selected>Relationship</option>
+              <option value="Spouse/Partner">Spouse/Partner</option>
+              <option value="Child">Child</option>
+              <option value="Sibling">Sibling</option>
+              <option value="Friend">Friend</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(1)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(1)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-screen" data-question="2" id="q2">
+          <div class="question-number">Question 3 of 8</div>
+          <div class="question-text">If your heart stopped, would you want CPR?</div>
+          <div class="option-group" id="answer-cpr">
+            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">Yes, attempt CPR</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">Only if there's a reasonable chance of recovery</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">No, allow natural death</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">I'm not sure yet</button>
+          </div>
+          <div class="question-explanation">CPR involves chest compressions and often electrical shocks. Ribs frequently break during the process. Success rates vary widely — in hospitals, about 25% survive to discharge. Outside hospitals, it's closer to 10%. Age and underlying conditions matter significantly.</div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(2)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(2)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-screen" data-question="3" id="q3">
+          <div class="question-number">Question 4 of 8</div>
+          <div class="question-text">If you couldn't breathe on your own, would you want to be put on a breathing machine?</div>
+          <div class="option-group" id="answer-ventilator">
+            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Yes, for as long as needed</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Yes, but only for a limited trial (e.g., 2 weeks)</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">No, I would prefer comfort care</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Not sure</button>
+          </div>
+          <div class="question-explanation">A ventilator is a machine that breathes for you through a tube placed in your throat. You cannot talk while on one. Some people recover and come off it within days. Others remain on it for weeks or longer. Some never come off.</div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(3)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(3)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-screen" data-question="4" id="q4">
+          <div class="question-number">Question 5 of 8</div>
+          <div class="question-text">If you couldn't eat or drink, would you want a feeding tube?</div>
+          <div class="option-group" id="answer-feeding">
+            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Yes</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Only for a short trial</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">No</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Not sure</button>
+          </div>
+          <div class="question-explanation">Artificial nutrition is delivered through a tube into your stomach or through an IV. It can sustain life for months or years, but it doesn't reverse the underlying condition that caused the inability to eat. It is a medical intervention, not the same as eating.</div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(4)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(4)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-screen" data-question="5" id="q5">
+          <div class="question-number">Question 6 of 8</div>
+          <div class="question-text">Where would you want to spend your final days?</div>
+          <div class="option-group" id="answer-location">
+            <button class="option-btn" onclick="selectOption(this, 'answer-location')">At home</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-location')">In a hospital</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-location')">In a hospice facility</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-location')">Wherever my family is</button>
+            <button class="option-btn" onclick="selectOption(this, 'answer-location')">I haven't thought about it</button>
+          </div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(5)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(5)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-screen" data-question="6" id="q6">
+          <div class="question-number">Question 7 of 8</div>
+          <div class="question-text">Is there anything you would consider worse than death?</div>
+          <div class="multi-hint">Select all that apply, or none.</div>
+          <div class="option-group" id="answer-boundaries">
+            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being permanently unconscious</button>
+            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being in constant pain</button>
+            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Not recognizing my family</button>
+            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being completely dependent on others for basic care</button>
+            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">None of these</button>
+          </div>
+          <div class="question-explanation">This question helps your proxy understand your boundaries. There are no right answers. Some people feel strongly about one of these. Others don't. What matters is that someone knows.</div>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(6)">Back</button>
+            <button class="btn-next" onclick="nextQuestion(6)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-screen" data-question="7" id="q7">
+          <div class="question-number">Question 8 of 8</div>
+          <div class="question-text">Is there anything else you want your family to know?</div>
+          <div class="question-why">This is your space. Some people write about funeral preferences. Others write love letters. There's no wrong answer.</div>
+          <textarea id="answer-final" placeholder="Whatever comes to mind. Or leave this blank — you can always come back to it."></textarea>
+          <div class="nav-buttons">
+            <button class="btn-back" onclick="prevQuestion(7)">Back</button>
+            <button class="btn-next" onclick="showResults()">See Your Summary</button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="results-screen" id="resultsScreen">
+          <div class="results-header">
+            <h3>Your Advance Care Planning Summary</h3>
+            <div class="results-date" id="resultsDate"></div>
+          </div>
+
+          <div class="results-proxy" id="resultsProxy">
+            <div class="results-label">Healthcare Proxy</div>
+            <div class="proxy-name" id="resultsProxyName"></div>
+            <div class="proxy-relationship" id="resultsProxyRelationship"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">What Matters Most</div>
+            <div class="results-value" id="resultsValues"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">CPR Preference</div>
+            <div class="results-value" id="resultsCpr"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">Breathing Machine (Ventilator)</div>
+            <div class="results-value" id="resultsVentilator"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">Feeding Tube</div>
+            <div class="results-value" id="resultsFeeding"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">Preferred Location for Final Days</div>
+            <div class="results-value" id="resultsLocation"></div>
+          </div>
+
+          <div class="results-section">
+            <div class="results-label">Conditions Considered Worse Than Death</div>
+            <div class="results-value" id="resultsBoundaries"></div>
+          </div>
+
+          <div class="results-section" id="resultsFinalSection">
+            <div class="results-label">Additional Wishes</div>
+            <div class="results-value" id="resultsFinal"></div>
+          </div>
+
+          <div class="results-legal-notice">
+            <strong>This is NOT a legal document.</strong> It is a conversation starter. To make your wishes legally binding, discuss this summary with your physician and complete your state's official advance directive form.
+          </div>
+
+          <div class="results-conversation-prompt" id="resultsConversationPrompt">
+          </div>
+
+          <div class="results-actions">
+            <button class="btn-print" onclick="window.print()">Print This Summary</button>
+            <a class="cta" href="https://caregoals.com" style="text-align: center;">Want Sage AI to guide you through the full advance directive? Start at caregoals.com</a>
+            <button class="btn-start-over" onclick="startOver()">Start Over</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="sep"></span>
+
     <section>
       <h2>Resources</h2>
       <ul class="resources">
@@ -345,5 +1025,220 @@
     </footer>
 
   </div>
+
+  <script>
+    (function() {
+      var currentStep = 0;
+      var totalSteps = 8;
+      var answers = {};
+
+      function updateProgress() {
+        var dots = document.querySelectorAll('.progress-dot');
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.remove('completed', 'active');
+          if (i < currentStep) {
+            dots[i].classList.add('completed');
+          } else if (i === currentStep) {
+            dots[i].classList.add('active');
+          }
+        }
+      }
+
+      function showScreen(index) {
+        var screens = document.querySelectorAll('.question-screen');
+        var target = document.getElementById('q' + index);
+
+        // Fade out current
+        for (var i = 0; i < screens.length; i++) {
+          if (screens[i].classList.contains('visible')) {
+            screens[i].classList.remove('visible');
+            screens[i].classList.add('fade-out');
+          }
+        }
+
+        setTimeout(function() {
+          for (var i = 0; i < screens.length; i++) {
+            screens[i].classList.remove('fade-out');
+            screens[i].style.display = 'none';
+          }
+          if (target) {
+            target.style.display = 'block';
+            // Force reflow before adding visible class for transition
+            void target.offsetHeight;
+            target.classList.add('visible');
+          }
+        }, 300);
+
+        currentStep = index;
+        updateProgress();
+
+        // Scroll to conversation tool
+        setTimeout(function() {
+          var section = document.getElementById('conversation-section');
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 350);
+      }
+
+      // Single-select option
+      window.selectOption = function(btn, groupId) {
+        var group = document.getElementById(groupId);
+        var buttons = group.querySelectorAll('.option-btn');
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('selected');
+        }
+        btn.classList.add('selected');
+      };
+
+      // Multi-select option
+      window.toggleMulti = function(btn, groupId) {
+        var group = document.getElementById(groupId);
+        var isNone = btn.textContent === 'None of these';
+
+        if (isNone) {
+          // Deselect everything else, toggle this
+          var buttons = group.querySelectorAll('.option-btn');
+          for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i] !== btn) buttons[i].classList.remove('selected');
+          }
+          btn.classList.toggle('selected');
+        } else {
+          // Deselect "None of these" if selecting something else
+          var noneBtn = null;
+          var buttons = group.querySelectorAll('.option-btn');
+          for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].textContent === 'None of these') {
+              noneBtn = buttons[i];
+              break;
+            }
+          }
+          if (noneBtn) noneBtn.classList.remove('selected');
+          btn.classList.toggle('selected');
+        }
+      };
+
+      function getSelectedOption(groupId) {
+        var group = document.getElementById(groupId);
+        var selected = group.querySelector('.option-btn.selected');
+        return selected ? selected.textContent : 'Not answered';
+      }
+
+      function getMultiSelected(groupId) {
+        var group = document.getElementById(groupId);
+        var selected = group.querySelectorAll('.option-btn.selected');
+        if (selected.length === 0) return 'Not answered';
+        var values = [];
+        for (var i = 0; i < selected.length; i++) {
+          values.push(selected[i].textContent);
+        }
+        return values.join('; ');
+      }
+
+      window.nextQuestion = function(from) {
+        showScreen(from + 1);
+      };
+
+      window.prevQuestion = function(from) {
+        showScreen(from - 1);
+      };
+
+      window.showResults = function() {
+        // Gather all answers
+        var values = document.getElementById('answer-values').value.trim() || 'Not answered';
+        var proxyName = document.getElementById('answer-proxy-name').value.trim() || 'Not specified';
+        var proxyRel = document.getElementById('answer-proxy-relationship').value || '';
+        var cpr = getSelectedOption('answer-cpr');
+        var ventilator = getSelectedOption('answer-ventilator');
+        var feeding = getSelectedOption('answer-feeding');
+        var location = getSelectedOption('answer-location');
+        var boundaries = getMultiSelected('answer-boundaries');
+        var finalWishes = document.getElementById('answer-final').value.trim();
+
+        // Populate results
+        document.getElementById('resultsDate').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById('resultsProxyName').textContent = proxyName;
+        document.getElementById('resultsProxyRelationship').textContent = proxyRel;
+        document.getElementById('resultsValues').textContent = values;
+        document.getElementById('resultsCpr').textContent = cpr;
+        document.getElementById('resultsVentilator').textContent = ventilator;
+        document.getElementById('resultsFeeding').textContent = feeding;
+        document.getElementById('resultsLocation').textContent = location;
+        document.getElementById('resultsBoundaries').textContent = boundaries;
+
+        if (finalWishes) {
+          document.getElementById('resultsFinal').textContent = finalWishes;
+          document.getElementById('resultsFinalSection').style.display = 'block';
+        } else {
+          document.getElementById('resultsFinalSection').style.display = 'none';
+        }
+
+        // Conversation prompt
+        var promptEl = document.getElementById('resultsConversationPrompt');
+        var displayName = proxyName !== 'Not specified' ? proxyName : 'your healthcare proxy';
+        promptEl.innerHTML = '<strong>The most important thing you can do right now</strong> is share this with ' + displayName + '. Show them this summary. Talk about it over coffee. It takes 30 minutes and it will be the most important conversation you\'ve ever had.';
+
+        // Hide all question screens
+        var screens = document.querySelectorAll('.question-screen');
+        for (var i = 0; i < screens.length; i++) {
+          screens[i].classList.remove('visible', 'fade-out');
+          screens[i].style.display = 'none';
+        }
+
+        // Mark all progress dots completed
+        var dots = document.querySelectorAll('.progress-dot');
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.add('completed');
+          dots[i].classList.remove('active');
+        }
+
+        // Show results
+        var resultsScreen = document.getElementById('resultsScreen');
+        resultsScreen.style.display = 'block';
+        void resultsScreen.offsetHeight;
+        resultsScreen.classList.add('visible');
+
+        var section = document.getElementById('conversation-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      window.startOver = function() {
+        // Reset form
+        document.getElementById('answer-values').value = '';
+        document.getElementById('answer-proxy-name').value = '';
+        document.getElementById('answer-proxy-relationship').selectedIndex = 0;
+        document.getElementById('answer-final').value = '';
+
+        // Reset all option buttons
+        var allOptions = document.querySelectorAll('.option-btn');
+        for (var i = 0; i < allOptions.length; i++) {
+          allOptions[i].classList.remove('selected');
+        }
+
+        // Hide results
+        var resultsScreen = document.getElementById('resultsScreen');
+        resultsScreen.classList.remove('visible');
+        resultsScreen.style.display = 'none';
+
+        // Show first question
+        currentStep = 0;
+        var q0 = document.getElementById('q0');
+        q0.style.display = 'block';
+        void q0.offsetHeight;
+        q0.classList.add('visible');
+        updateProgress();
+
+        var section = document.getElementById('conversation-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      // Initialize
+      updateProgress();
+    })();
+  </script>
 </body>
 </html>

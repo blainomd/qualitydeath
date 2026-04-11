@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Advocate Portal | Sage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#022100",
+                        "secondary-container": "#e4e2e1",
+                        "primary": "#436438",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed-dim": "#aad19b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#fcf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed": "#191c1b",
+                        "on-surface-variant": "#43483f",
+                        "tertiary-fixed": "#e1e3e0",
+                        "on-primary-container": "#f8ffef",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "primary-container": "#5b7e4e",
+                        "tertiary-fixed-dim": "#c5c7c4",
+                        "surface-container": "#f0eded",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-tertiary-fixed-variant": "#444746",
+                        "outline-variant": "#c3c8bc",
+                        "on-secondary-container": "#656464",
+                        "surface-bright": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "outline": "#73796e",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed": "#c6eeb5",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#595d5b",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#45673a",
+                        "background": "#fcf9f8",
+                        "inverse-primary": "#aad19b",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed-variant": "#2e4f24",
+                        "on-secondary-fixed-variant": "#474747",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "inverse-surface": "#313030",
+                        "tertiary-container": "#727573",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-container": "#fbfdfa",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface mb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a mature woman with a gentle expression and gray hair, soft natural lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ5BCLon3OeRREGZozW4Sf4Oje45C8IFYWee47R9KncN5VsJIIRo47SdQxJGhCiDHwtFlt3WYaB6_NkaEmFIGU52ARy6fcL7nwCFs91tsdSXDt8g2QSGaSraXuKAOQp6nZd8642p5MPI683ZRnkXwjN8SfQBgyu0uegvud-WiklJWDFJDqb4v5rjr3QuBSykITBBxxTQboac3XV59mcxXiF2jlF7C4MKiCgcgpKjvwL_ILN4dvxndWozK-29x0JSM7nlxbJ4Mr4yaE"/>
+<span class="font-inter tracking-tight leading-tight text-2xl font-semibold tracking-tighter text-[#436438] dark:text-[#6B8F5E]">Sage</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-stone-500 hover:opacity-70 transition-opacity duration-300" data-icon="search">search</button>
+<div class="hidden md:flex gap-8">
+<span class="font-inter text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:opacity-70 cursor-pointer">Editorial Hub</span>
+<span class="font-inter text-sm tracking-wide uppercase text-[#436438] dark:text-[#6B8F5E] font-medium transition-opacity">Advocate Portal</span>
+<span class="font-inter text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:opacity-70 cursor-pointer">Values Workshop</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 pt-32 pb-12">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1">
+<span class="font-inter text-sm tracking-widest uppercase text-primary mb-4 block font-semibold">Advocate Portal</span>
+<h1 class="text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-6 leading-[1.1]">The circle of <br/><span class="text-primary-container italic font-medium">collaborative care.</span></h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">As a designated advocate for Eleanor Thompson, you have secure access to shared wishes, essential documents, and the evolving story of her legacy.</p>
+</div>
+<div class="w-full md:w-auto flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-medium hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="security">security</span>
+                        Security Protocol Active
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Shared Documents (Large Card) -->
+<div class="md:col-span-8 bg-surface-container-low rounded-[2rem] p-8 overflow-hidden relative border border-outline-variant/10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h2 class="text-2xl font-bold mb-2">Shared Documents</h2>
+<p class="text-on-surface-variant text-sm">Verified legal and personal directive files.</p>
+</div>
+<button class="text-primary font-medium flex items-center gap-1 hover:underline">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:bg-white transition-colors group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<h3 class="font-semibold text-on-surface">Living Will</h3>
+<p class="text-xs text-on-surface-variant">Updated Oct 12, 2023</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="text-xs bg-secondary-container px-3 py-1.5 rounded-full font-medium">Review</button>
+<button class="text-xs border border-outline-variant/30 px-3 py-1.5 rounded-full font-medium hover:bg-surface-container">Download</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:bg-white transition-colors group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<h3 class="font-semibold text-on-surface">Medical Proxy</h3>
+<p class="text-xs text-on-surface-variant">Updated Sep 05, 2023</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="text-xs bg-secondary-container px-3 py-1.5 rounded-full font-medium">Review</button>
+<button class="text-xs border border-outline-variant/30 px-3 py-1.5 rounded-full font-medium hover:bg-surface-container">Download</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:bg-white transition-colors group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div>
+<h3 class="font-semibold text-on-surface">Power of Attorney</h3>
+<p class="text-xs text-on-surface-variant">Updated Jan 20, 2024</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="text-xs bg-secondary-container px-3 py-1.5 rounded-full font-medium">Review</button>
+<button class="text-xs border border-outline-variant/30 px-3 py-1.5 rounded-full font-medium hover:bg-surface-container">Download</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border-2 border-dashed border-outline-variant/40 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container/30 transition-all">
+<span class="material-symbols-outlined text-outline mb-2" data-icon="add_circle">add_circle</span>
+<p class="text-sm font-medium text-on-surface-variant">Upload New Document</p>
+</div>
+</div>
+</div>
+<!-- Urgent Call to Action (Tall/Slim) -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-primary-container p-8 rounded-[2rem] text-on-primary-container flex-1 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6 block" data-icon="campaign">campaign</span>
+<h2 class="text-2xl font-bold mb-4">Pending Review</h2>
+<p class="opacity-90 mb-8 leading-relaxed">Eleanor has updated her 'End of Life Comfort' preferences. Please review and acknowledge these changes to keep everyone aligned.</p>
+</div>
+<button class="w-full bg-on-primary-container text-primary font-bold py-4 rounded-xl hover:scale-[1.02] transition-transform">
+                        Start Review
+                    </button>
+</div>
+<div class="bg-surface-container-high p-8 rounded-[2rem]">
+<h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="forum">forum</span>
+                        Care Chat
+                    </h3>
+<p class="text-sm text-on-surface-variant mb-6">Discuss wishes with Eleanor and other advocates securely.</p>
+<div class="flex -space-x-3 mb-6">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Portrait of a young woman with smiling eyes, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgbH4Yl8hwYP67qEfvT7PZTTxTUCbU7xuXHPZdqJuXSMcmsjQGDuPlQ0UMsFS_w7OuDmz2pIG5FvipB2Yx-LPQ-wLOtatUoOuyEXDwdal9haBnUMdOWtHk3RlJ4XGZ5HTh0RPDY0S1xkLsI74kalCIEwvwbBY9hftX3eD7x51ykJcf79KmnZEEStnzazmF8CKxqUccNVBk_3nhXf62vhBFbJWAW32X2ylF2TlQ0oorze_h8eMlD6nz4jedrLuDhWPjLcMX0cskOFvD"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Portrait of a middle-aged man in a professional setting, clean lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnlhbHV0ubc3J89nY-bb4niCu9bz_eXZniGY_-Z5-dVvxZqGqX9akIbFv8xxp1s7E-kxmwdRykelezwEgfYShVOE9G8z8SYoi5rjKAeL9U6KcaOEqnSvRLVXMkwdaWpYcUDJ5kJ3UOd0Ncg3I2_wpqSWQVqTTX0a1OwPQueZ-T8_ab6MPbSGkR9AoxbooHu4EKcPm-ikAOe2v0CJsDBAx6x8tU6a_2y9CtY7nh_ffoxCitbF_pjh7JEQ-YQcZpf5omcJbLKpT2Fjw9"/>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-xs font-bold">+2</div>
+</div>
+<button class="text-primary font-semibold text-sm">Open Dialogue</button>
+</div>
+</div>
+<!-- Timeline of Updates (Wide/Full) -->
+<div class="md:col-span-12 bg-surface-container-lowest border border-outline-variant/15 rounded-[2rem] p-10 mt-6">
+<div class="flex justify-between items-center mb-12">
+<h2 class="text-3xl font-bold tracking-tight">Timeline of Updates</h2>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-low rounded-full text-xs font-bold uppercase tracking-wider">All Activity</button>
+<button class="px-4 py-2 text-on-surface-variant rounded-full text-xs font-bold uppercase tracking-wider hover:bg-surface-container-low transition-colors">Wishes Only</button>
+</div>
+</div>
+<div class="relative space-y-12 before:content-[''] before:absolute before:left-[11px] before:top-0 before:h-full before:w-[2px] before:bg-surface-container-high">
+<!-- Update Item -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-white text-[14px]" data-icon="edit_note">edit_note</span>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+<div>
+<h4 class="font-bold text-lg">Eleanor updated "Spiritual Care" preferences</h4>
+<p class="text-on-surface-variant max-w-2xl mt-1">Refined the details regarding the presence of local community members and preferred readings during hospice care.</p>
+</div>
+<span class="text-sm font-monospace text-primary font-semibold bg-primary-fixed px-3 py-1 rounded-md shrink-0 self-start">TODAY, 10:45 AM</span>
+</div>
+</div>
+<!-- Update Item -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-on-secondary-container text-[14px]" data-icon="file_upload">file_upload</span>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+<div>
+<h4 class="font-bold text-lg">Power of Attorney document verified</h4>
+<p class="text-on-surface-variant max-w-2xl mt-1">The legal department has successfully verified the uploaded PoA documents. All advocates now have viewing access.</p>
+</div>
+<span class="text-sm font-monospace text-on-surface-variant font-medium bg-surface-container-low px-3 py-1 rounded-md shrink-0 self-start">JAN 20, 2024</span>
+</div>
+</div>
+<!-- Update Item -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]" data-icon="group">group</span>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+<div>
+<h4 class="font-bold text-lg">New Advocate Added: Mark Thompson</h4>
+<p class="text-on-surface-variant max-w-2xl mt-1">Mark has been granted access as a secondary advocate for healthcare decisions.</p>
+</div>
+<span class="text-sm font-monospace text-on-surface-variant font-medium bg-surface-container-low px-3 py-1 rounded-md shrink-0 self-start">JAN 15, 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy & Security Notice -->
+<div class="md:col-span-12 mt-8 text-center p-12 border border-outline-variant/10 rounded-[2rem] bg-stone-50/50">
+<span class="material-symbols-outlined text-primary/40 text-4xl mb-4 block" data-icon="verified_user">verified_user</span>
+<h3 class="font-bold text-xl mb-2">End-to-End Encrypted Workspace</h3>
+<p class="text-on-surface-variant max-w-xl mx-auto text-sm leading-relaxed">Sage uses military-grade encryption for all shared files and conversations. Access logs are strictly monitored and only visible to Eleanor and her primary advocate.</p>
+<button class="mt-6 text-primary font-semibold text-sm underline underline-offset-4">Learn about our Security Protocols</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl border-t-[0.5px] border-stone-200/15 md:hidden">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#436438] dark:text-[#6B8F5E] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Advocate</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Workshop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Stories</span>
+</a>
+</nav>
+</body></html>

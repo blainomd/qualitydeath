@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "primary-container": "#5b7e4e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#474747",
+                    "inverse-surface": "#313030",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-high": "#eae7e7",
+                    "tertiary": "#595d5b",
+                    "on-tertiary-fixed-variant": "#444746",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5f5e5e",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fbfdfa",
+                    "surface-tint": "#45673a",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#c5c7c4",
+                    "on-primary-fixed-variant": "#2e4f24",
+                    "on-primary-fixed": "#022100",
+                    "background": "#fcf9f8",
+                    "surface-variant": "#e5e2e1",
+                    "outline-variant": "#c3c8bc",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline": "#73796e",
+                    "on-tertiary-fixed": "#191c1b",
+                    "surface-container-low": "#f6f3f2",
+                    "on-surface-variant": "#43483f",
+                    "tertiary-container": "#727573",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-secondary-container": "#656464",
+                    "on-primary-container": "#f8ffef",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#436438",
+                    "secondary-container": "#e4e2e1",
+                    "primary-fixed-dim": "#aad19b",
+                    "primary-fixed": "#c6eeb5",
+                    "secondary-fixed": "#e4e2e1",
+                    "tertiary-fixed": "#e1e3e0",
+                    "inverse-primary": "#aad19b",
+                    "surface-container": "#f0eded",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "surface": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .soft-press:active {
+            transform: scale(0.95);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(28, 27, 27, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 backdrop-blur-xl flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#6B8F5E]" data-icon="spa">spa</span>
+<span class="text-xl font-bold tracking-tight text-[#436438]">Sage</span>
+</div>
+<button class="material-symbols-outlined text-stone-500 soft-press p-2 hover:bg-stone-100/50 rounded-full" data-icon="close">close</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Success/Intro Section -->
+<section class="mb-12">
+<h1 class="text-3xl font-bold tracking-tight text-on-surface mb-4">Ready to share.</h1>
+<p class="text-body-lg text-secondary leading-relaxed max-w-[90%]">
+                Your Advance Directive is complete. Review your final document and decide who should have access to your wishes.
+            </p>
+</section>
+<!-- Document Preview Card (Mindful Editorial Style) -->
+<section class="mb-12">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary-fixed-dim/10 rounded-xl -rotate-1 scale-[1.02]"></div>
+<div class="relative bg-surface-container-lowest editorial-shadow rounded-xl p-8 aspect-[3/4] flex flex-col border border-outline-variant/10">
+<div class="flex justify-between items-start mb-10">
+<div class="w-12 h-1 bg-primary/20 rounded-full"></div>
+<span class="text-[10px] font-bold tracking-[0.2em] text-outline uppercase">OFFICIAL DOCUMENT</span>
+</div>
+<div class="space-y-6 flex-grow">
+<div class="space-y-2">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Advance Healthcare Directive</h2>
+<p class="text-xs text-secondary italic">Prepared for: Alex J. Sterling</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-surface-container-high">
+<div class="flex gap-4 items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+<div class="space-y-1">
+<div class="h-2.5 w-32 bg-surface-container rounded-full"></div>
+<div class="h-2.5 w-48 bg-surface-container-low rounded-full"></div>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+<div class="space-y-1">
+<div class="h-2.5 w-40 bg-surface-container rounded-full"></div>
+<div class="h-2.5 w-36 bg-surface-container-low rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-surface-container-low p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Clinically Validated Draft</span>
+</div>
+</div>
+<div class="mt-auto pt-8 flex justify-between items-end">
+<div class="space-y-1">
+<p class="text-[9px] text-outline font-medium tracking-widest uppercase">TIMESTAMP</p>
+<p class="text-[11px] font-semibold text-on-surface">OCT 24, 2023</p>
+</div>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="professional portrait of a healthcare consultant for document validation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjlr5PJ9kC5ce0q9-vwIt7HGTO20B2T0_89OePNL87Oa_YKeEuhmkwAqr7w_KCMOzaE9R_nVR-hSrZggx60hcRv52bgyR-8QO9nVdRphjY2kJCjWeh64zY4zH4nmtL9dZws5CJjphRLqb9u1U_6zrZ3C44aCT4HdzoIDPgXcY8hWzdW4e9mScixHhqdyC9tdQoAVQFZnTV2vOJgFfnWdKJuutZDQ8yfEaFYWeuP-PtLFRrTDm-KJN65uelApXoDQXEY4wLWRkT7Rr"/>
+<div class="w-8 h-8 rounded-full bg-primary-container text-[8px] flex items-center justify-center text-white border-2 border-surface-container-lowest font-bold">AJ</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Action Cluster -->
+<section class="space-y-4 mb-16">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-semibold flex items-center justify-center gap-3 soft-press shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+                Share with Family
+            </button>
+<div class="grid grid-cols-2 gap-4">
+<button class="bg-surface-container-low text-on-surface-variant py-4 rounded-xl font-semibold flex flex-col items-center justify-center gap-2 soft-press border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" data-icon="download">download</span>
+<span class="text-xs uppercase tracking-widest font-bold">Download PDF</span>
+</button>
+<button class="bg-surface-container-low text-on-surface-variant py-4 rounded-xl font-semibold flex flex-col items-center justify-center gap-2 soft-press border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" data-icon="print">print</span>
+<span class="text-xs uppercase tracking-widest font-bold">Print Copy</span>
+</button>
+</div>
+</section>
+<!-- Editorial Info Blocks -->
+<section class="space-y-12">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-lg font-bold tracking-tight">Your data is secure</h3>
+<p class="text-sm text-secondary leading-relaxed">We use end-to-end encryption. Only the people you share the unique link with can view this document.</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-8 space-y-4">
+<p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">Pro-Tip</p>
+<h4 class="text-xl font-bold leading-snug">Consider sharing with your primary physician</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Ensuring your doctor has a copy of your Advance Directive is just as important as sharing it with your family.</p>
+<button class="text-primary text-sm font-bold flex items-center gap-2 pt-2">
+                    Email doctor
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f8]/80 backdrop-blur-xl border-t-[0.5px] border-stone-200/15 flex justify-around items-center px-4 pb-8 pt-4 shadow-[0_-20px_40px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-stone-500 hover:text-[#436438] transition-colors px-5 py-1.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 hover:text-[#436438] transition-colors px-5 py-1.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Conversation</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#6B8F5E]/10 text-[#436438] rounded-2xl px-5 py-1.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Plan</span>
+</a>
+</nav>
+</body></html>

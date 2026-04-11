@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sage - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "primary-container": "#5b7e4e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#313030",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary": "#595d5b",
+                        "on-tertiary-fixed-variant": "#444746",
+                        "on-surface": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#fbfdfa",
+                        "surface-tint": "#45673a",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed-dim": "#c5c7c4",
+                        "on-primary-fixed-variant": "#2e4f24",
+                        "on-primary-fixed": "#022100",
+                        "background": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "outline-variant": "#c3c8bc",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#73796e",
+                        "on-tertiary-fixed": "#191c1b",
+                        "surface-container-low": "#f6f3f2",
+                        "on-surface-variant": "#43483f",
+                        "tertiary-container": "#727573",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary-container": "#656464",
+                        "on-primary-container": "#f8ffef",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#436438",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed-dim": "#aad19b",
+                        "primary-fixed": "#c6eeb5",
+                        "secondary-fixed": "#e4e2e1",
+                        "tertiary-fixed": "#e1e3e0",
+                        "inverse-primary": "#aad19b",
+                        "surface-container": "#f0eded",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6B8F5E]" data-icon="spa">spa</span>
+<span class="text-xl font-bold tracking-tight text-[#436438] font-['Inter']">Sage</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-500 hover:bg-stone-100/50 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-16 pb-32">
+<!-- Hero Section: Mindful Editorial -->
+<section class="px-6 pt-8">
+<div class="relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-surface-container">
+<img alt="Serene landscape" class="absolute inset-0 w-full h-full object-cover" data-alt="Soft morning light filtering through tall sage grass in a quiet meadow with a blurred horizon and warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVkmOtJsLxTX5rfh8-JIWJ1ow1WVlRa2ighFXCuC0dIkOGZOzZVQC47F-XuuqmYWz-eKkJCvqTr64Pk-KDB0E-KA9SrsEu-ULIVC4p4Cb3Y3ldkicmIWTWhs3_ij-XFMnU6KuSflBq5j3fSVS82AbKVbYxpVnemxtOQD1DmAeZyeNOmLu1oXLTkuYxlSjTPjM7hOFFoykaF2r6u6M0jVIfg0LUuf5I6dhjm1pQnHcSl6QkaLpDFSWovJVqj790gdRUFn7-PXvzoe1Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#436438]/40 to-transparent"></div>
+</div>
+</section>
+<!-- Content Canvas -->
+<section class="px-8 mt-12 mb-16 space-y-8 max-w-xl mx-auto">
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface leading-tight">
+                    Your story matters.
+                </h1>
+<div class="w-12 h-1 bg-primary-fixed-dim rounded-full"></div>
+</div>
+<div class="space-y-6 text-on-surface-variant">
+<p class="text-lg leading-relaxed font-body">
+                    Talking about the end of life isn't about dying—it's about how you want to live. It's about ensuring your wishes are honored and your loved ones are guided by your voice.
+                </p>
+<p class="text-base leading-relaxed opacity-80">
+                    Sage provides a gentle, expert-led space to explore these difficult questions at your own pace, turning fear into a legacy of clarity and peace.
+                </p>
+</div>
+<!-- Bento-style information cards -->
+<div class="grid grid-cols-1 gap-4 mt-8">
+<div class="bg-surface-container-low p-6 rounded-full flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</div>
+<div>
+<h3 class="font-semibold text-on-surface">Emotional Support</h3>
+<p class="text-sm text-on-surface-variant">Gentle guidance through sensitive topics.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="auto_stories">auto_stories</span>
+</div>
+<div>
+<h3 class="font-semibold text-on-surface">Structured Planning</h3>
+<p class="text-sm text-on-surface-variant">Clear pathways for complex decisions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 pb-12 flex flex-col items-center max-w-xl mx-auto">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-semibold text-lg transition-transform active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+                Start your conversation
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="mt-6 text-sm text-stone-400 font-medium uppercase tracking-widest">
+                No commitment required
+            </p>
+</section>
+</main>
+<!-- BottomNavBar (Suppressed for focused entry screen per logic, but standard UI structure) -->
+<!-- The user is in a focused onboarding journey, so we hide the global nav to focus on the CTA -->
+</body></html>

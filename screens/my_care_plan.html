@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sage - My Care Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "primary-container": "#5b7e4e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#313030",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary": "#595d5b",
+                        "on-tertiary-fixed-variant": "#444746",
+                        "on-surface": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#fbfdfa",
+                        "surface-tint": "#45673a",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed-dim": "#c5c7c4",
+                        "on-primary-fixed-variant": "#2e4f24",
+                        "on-primary-fixed": "#022100",
+                        "background": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "outline-variant": "#c3c8bc",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#73796e",
+                        "on-tertiary-fixed": "#191c1b",
+                        "surface-container-low": "#f6f3f2",
+                        "on-surface-variant": "#43483f",
+                        "tertiary-container": "#727573",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary-container": "#656464",
+                        "on-primary-container": "#f8ffef",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#436438",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed-dim": "#aad19b",
+                        "primary-fixed": "#c6eeb5",
+                        "secondary-fixed": "#e4e2e1",
+                        "tertiary-fixed": "#e1e3e0",
+                        "inverse-primary": "#aad19b",
+                        "surface-container": "#f0eded",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f8; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(28, 27, 27, 0.05);
+        }
+        .glass-header {
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-fixed-dim">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 glass-header flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#6B8F5E]" data-icon="spa">spa</span>
+<h1 class="text-xl font-bold tracking-tight text-[#436438] font-headline">Sage</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-stone-100/50 transition-colors duration-200">
+<span class="material-symbols-outlined text-stone-500" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User Profile" data-alt="close-up portrait of a serene elderly person with gentle eyes and a kind smile, soft natural lighting, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4723uOqpUQgLVGp-k1JhP5MvDsebxwCtC1TnYpGriMcImfkKwAdEp4oeWL7fBj09hvtibDRX5TkdoAbk6H-eHJG2n6cGBjSRHsOIlyvlqlS49QFJrcx4EkcB8iybj-QYgCSTrIHjC2G_MxhsIJ-JtAvHg0gXrh3Sp3TaCe47Zj4_7V59rQQe1B2V1Cfo922gdB8NrmVCBAqpqF0Qq1lBEzLEA6N70MJPe4rrHbuNmY54UjwRlTwsohQFSdCJV0snAPDGFy8r_A3dY"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<span class="text-label-md font-medium text-primary tracking-widest uppercase text-[10px] mb-2 block">Dashboard</span>
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-4 leading-tight">My Care Plan</h2>
+<p class="text-body-lg text-secondary leading-relaxed max-w-[90%]">
+                Your journey towards peace of mind is 65% complete. Taking these steps today ensures your voice is heard tomorrow.
+            </p>
+</section>
+<!-- Progress Overview -->
+<section class="mb-12">
+<div class="bg-surface-container-lowest rounded-3xl p-8 editorial-shadow border border-outline-variant/10">
+<div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-sm text-secondary font-medium mb-1">Overall Progress</p>
+<p class="text-3xl font-bold text-primary tracking-tighter">65% <span class="text-lg font-normal text-stone-400">Complete</span></p>
+</div>
+<div class="text-right">
+<span class="text-[10px] font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded-full uppercase tracking-tighter">2/4 Sections</span>
+</div>
+</div>
+<div class="relative w-full h-3 bg-surface-container-low rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-primary-container" style="width: 65%;"></div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<p class="text-xs text-secondary italic">Last updated: Oct 24, 2023</p>
+<button class="text-primary text-sm font-semibold flex items-center gap-1">
+                        View Summary <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Plan Sections Bento-ish Grid -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Quality of Life -->
+<div class="group bg-surface-container-low rounded-3xl p-6 transition-all duration-300 hover:bg-surface-container-lowest hover:editorial-shadow border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</div>
+<span class="text-[10px] font-bold text-primary-container bg-primary-fixed rounded-full px-3 py-1">COMPLETED</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Quality of Life</h3>
+<p class="text-sm text-secondary leading-relaxed mb-4">Defining what makes life meaningful for you and your daily joy.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all">
+                    Edit preferences <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Medical Preferences -->
+<div class="group bg-surface-container-low rounded-3xl p-6 transition-all duration-300 hover:bg-surface-container-lowest hover:editorial-shadow border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-tertiary-fixed-dim/30 rounded-2xl flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant bg-surface-container-high rounded-full px-3 py-1">IN PROGRESS</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Medical Preferences</h3>
+<p class="text-sm text-secondary leading-relaxed mb-4">Specific clinical treatments and life-sustaining measures.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all">
+                    Continue <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Who Makes Decisions -->
+<div class="group bg-surface-container-low rounded-3xl p-6 transition-all duration-300 hover:bg-surface-container-lowest hover:editorial-shadow border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-secondary-fixed/50 rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant bg-surface-container-high rounded-full px-3 py-1">NOT STARTED</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Who Makes Decisions</h3>
+<p class="text-sm text-secondary leading-relaxed mb-4">Selecting your Healthcare Proxy and trusted advocates.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all">
+                    Start Section <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Comfort Care -->
+<div class="group bg-surface-container-low rounded-3xl p-6 transition-all duration-300 hover:bg-surface-container-lowest hover:editorial-shadow border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="bed">bed</span>
+</div>
+<span class="text-[10px] font-bold text-primary-container bg-primary-fixed rounded-full px-3 py-1">COMPLETED</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Comfort Care</h3>
+<p class="text-sm text-secondary leading-relaxed mb-4">Environment, spiritual needs, and emotional comfort.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all">
+                    Review <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Insight Card -->
+<div class="mt-12 bg-primary-container rounded-3xl p-8 text-on-primary-container relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-2xl font-bold mb-3">Why this matters</h4>
+<p class="text-sm opacity-90 leading-relaxed mb-6">
+                    Documentation ensures your loved ones aren't left with difficult choices during stressful times. It's the ultimate gift of clarity.
+                </p>
+<button class="bg-surface-container-lowest text-primary px-6 py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg">
+                    Read the Guide
+                </button>
+</div>
+<!-- Decorative abstraction -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f8]/80 glass-header rounded-t-3xl border-t-[0.5px] border-stone-200/15 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] flex justify-around items-center px-4 pb-8 pt-4">
+<a class="flex flex-col items-center justify-center text-stone-500 px-5 py-1.5 hover:text-[#436438] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-5 py-1.5 hover:text-[#436438] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Conversation</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#6B8F5E]/10 text-[#436438] rounded-2xl px-5 py-1.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="description">description</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Plan</span>
+</a>
+</nav>
+<!-- FAB Suppression: On Detail-heavy dashboard, prioritize content space. Suppressed as per instructions for Details/Transactional screens -->
+</body></html>

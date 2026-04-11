@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sage | Community Stories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#022100",
+                    "secondary-container": "#e4e2e1",
+                    "primary": "#436438",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#aad19b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed": "#191c1b",
+                    "on-surface-variant": "#43483f",
+                    "tertiary-fixed": "#e1e3e0",
+                    "on-primary-container": "#f8ffef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "primary-container": "#5b7e4e",
+                    "tertiary-fixed-dim": "#c5c7c4",
+                    "surface-container": "#f0eded",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed-variant": "#444746",
+                    "outline-variant": "#c3c8bc",
+                    "on-secondary-container": "#656464",
+                    "surface-bright": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "outline": "#73796e",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed": "#c6eeb5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#595d5b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#45673a",
+                    "background": "#fcf9f8",
+                    "inverse-primary": "#aad19b",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#2e4f24",
+                    "on-secondary-fixed-variant": "#474747",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#727573",
+                    "secondary": "#5f5e5e",
+                    "on-tertiary-container": "#fbfdfa",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a serene man with silver hair, soft natural lighting in a garden setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANM6IPT5WF_gaotDhFtvK-cuZn-J2zqRHhq8NejdWViHJou9Mu_IzSSvxrrrgaRZNztCTxs7z9cIQF-braBgn7tOkBaP28neW9nNSru45kDdezl2ePQWHajkUevHwY3yniGbtJtiTAHEAT5pipVnTPiIzkS41l6NUGNdeCYnItq4aOcysrPTPYCzFErG5n8GqNbYazytledrT1EZZsNgOEyC2B3G--CJoKEGJ5gSZAAsz9_dDcMDdr5a0wkZDK9aNFKCAz3BQlIFzG"/>
+<span class="text-2xl font-semibold tracking-tighter text-[#436438] dark:text-[#6B8F5E]">Sage</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<span class="text-stone-500 dark:text-stone-400 font-inter tracking-tight hover:opacity-70 transition-opacity duration-300 cursor-pointer">Editorial Hub</span>
+<span class="text-stone-500 dark:text-stone-400 font-inter tracking-tight hover:opacity-70 transition-opacity duration-300 cursor-pointer">Advocate Portal</span>
+<span class="text-stone-500 dark:text-stone-400 font-inter tracking-tight hover:opacity-70 transition-opacity duration-300 cursor-pointer">Values Workshop</span>
+<span class="text-[#436438] dark:text-[#6B8F5E] font-medium font-inter tracking-tight hover:opacity-70 transition-opacity duration-300 cursor-pointer">Community Stories</span>
+</nav>
+<button class="material-symbols-outlined text-[#436438] dark:text-[#6B8F5E] p-2 hover:bg-surface-container-low rounded-full transition-colors">search</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="max-w-3xl">
+<h1 class="text-6xl font-bold tracking-tighter text-on-surface mb-6 leading-[1.1]">The art of saying <br/><span class="text-primary italic">goodbye, well.</span></h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl font-body">
+                    End-of-life planning isn't just about documents; it's about the people we leave behind and the conversations we have today. Explore shared experiences from our community.
+                </p>
+<div class="mt-10 flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-md font-medium hover:opacity-90 transition-opacity">Share your story</button>
+<button class="text-primary px-8 py-3 rounded-md font-medium border border-outline-variant/30 hover:bg-surface-container-low transition-colors">Browse categories</button>
+</div>
+</div>
+</section>
+<!-- Featured Story Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<!-- Large Featured Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="bg-surface-container-low rounded-xl overflow-hidden relative min-h-[500px] flex flex-col justify-end p-10 border border-outline-variant/10">
+<img alt="Featured story background" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Blurred background of an old wooden table with a handwritten letter and a single dried flower in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwAxfXNf-sQyHzPsPLTes4TXaJotfZsU74-msBd-0mXUgjbfWCJlek6MesNSDZQXbw3Kj8A17ZbxQC1To_ilqlmWXEYjHAxPE0vAW2_aZQI71OFh-d9trFrq1ZlAuQU5phG9oDdvsuHI2qwSB_RHveiDWZqS7fHQFsNvZEc_AXkLNh3sCQN7Y96zPajcgxGCXriVTYKRIuuXKDkS54h6JMo3Atz2qicsPRTu9FOXpih1MoWFFYaXtD2oloSnYfeDkqT-65UQEu1vTm"/>
+<div class="relative z-10">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Featured Reflection</span>
+<h2 class="text-4xl font-bold text-on-surface mb-4 tracking-tight leading-tight">The Sunday Dinners That Changed Everything</h2>
+<p class="text-on-surface-variant text-lg mb-8 max-w-xl leading-relaxed">How a simple conversation over pasta turned into a beautiful roadmap for my father's legacy.</p>
+<div class="flex items-center gap-3">
+<img alt="Elena R." class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a woman with kind eyes and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_xnSCKGfg3a30EUmO9d2pwO3v0UVAMADd0eQjgCbsLBWi24McNDvwAsvVB_NdNc8K8AkF0OMcaMDvfd0bE9cWu440ejOJLYwC_ksd38OLaYdg5KFBeEKaighDNfYfnWgpVXF7_pXt8TBau8UO4wtdOy96ig2s7tQsz3_kBULP0rcMrPsjj5QCeqAOoRb8zXC-Hf8gqVOiW_PjFsmuxu5l_sNpyj35BHEG_pMK-yuWBp_AS62X6BbFqNnklONXcCfPn6r1Gwso1bKg"/>
+<span class="font-medium text-on-surface">Elena Rodriguez</span>
+<span class="text-outline text-sm">• 8 min read</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Secondary Card -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-highest/30 rounded-xl p-8 flex-1 border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="text-primary font-bold text-xs tracking-widest uppercase mb-4 block">Legacy</span>
+<h3 class="text-xl font-bold text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors">Beyond the Will: Digital Afterlives</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Navigating the complex world of passwords, memories, and cloud storage.</p>
+<div class="flex items-center gap-3">
+<img alt="Marcus T." class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a young man wearing glasses in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv41KduRGrN8m-jsnpPtbTyW_f9Oaivs53aKx3R9sIyDHBUr_sMW2tIv6hbwyUEwxiYki3_F38a4jJzpOtf2s77-O7Tv7fHMiNh-M1AkOBAwS64ewTVAN3IwgD-uS4uHOhMFMUxcIAXGfszHbzb0f_jUGctXrQmL3D8fGFVMFFKmT0d9Y8gdBVA3IyoEuS41y2FwuCSEUWaxDQiPWFagM2ruDhS23pv-zytykjUQ5fFsy0DWUdZZgIuEIrKYn8VuZ8zNzHGCIeLxpI"/>
+<span class="text-sm font-medium">Marcus Thorne</span>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary-container rounded-xl p-8 flex-1 cursor-pointer hover:opacity-95 transition-opacity">
+<h3 class="text-2xl font-bold mb-4 leading-tight">Join the Workshop</h3>
+<p class="text-on-primary-container/80 text-sm mb-6 leading-relaxed">A guided space to start your own family conversation toolkit this weekend.</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold uppercase tracking-widest">Register Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Story Grid Section -->
+<div class="mb-12 flex items-center justify-between">
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">Human Experiences</h2>
+<div class="flex gap-2">
+<button class="bg-surface-container p-2 rounded-full material-symbols-outlined text-secondary">tune</button>
+<button class="bg-surface-container p-2 rounded-full material-symbols-outlined text-secondary">grid_view</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Story Card 1 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Garden image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A peaceful backyard garden with a wooden bench and sunbeams filtering through large maple leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUrIz7Rz1Cvs4xhRdntSECzJZS-0lk4L4tkQYVEyhnKybNY-uQnSrZ9rPSQAVTtUqitId9a-T2Wk-lSTaf587Qat9sv4SW5RW9IrMZ9Ti7ewROwETLU4MRYRza25_zkCZXgr7Uet6-RB2ud8gdZdhnSqt7UtmzdZO8hoTZD-hK7qveiTTiqHyownjGo9dqO3s_X4ibRHCTsa1C8zqoTWGQ8H4jZa8Z4d3yt5wldL84EE2HLbfcprfvUdIxfeOnLfYm_6EjOqka82Qu"/>
+</div>
+<span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2">Philosophy</span>
+<h3 class="text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:underline decoration-primary decoration-2 underline-offset-4">Finding Peace in the Practical</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm line-clamp-3 mb-6">When my mother was diagnosed, we spent weeks in fear. It wasn't until we sat down with a planner that we actually started living again.</p>
+<div class="mt-auto flex items-center gap-3">
+<img alt="Sarah L." class="w-8 h-8 rounded-full object-cover" data-alt="Woman with freckles smiling softly into the camera with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TQhTJBJRSuUnI-kGoeOOQfUODkE3IWn8VNTCdoTjI0ssjbOBqZgV_OTIidUoeOM1PJazEzhMEVRGeFXcnksp4Ktt7RWTY0Gn4vBhdB4IzsDWqhiYJ-2EwOYgRSaTmnZL3v4VFkpO8zVx-en2hBETYAPRtmcJvP45ERmMJpxXNzTZEOEcENiatH34-qyilQUUf5F1rEdeD6gt1n5ajej7Cwm9hBlnaBK6cashTniandr_65WMnVz5bFaCpE5f8-rdMlb1R0WVI3ox"/>
+<span class="text-xs font-semibold text-on-surface">Sarah Landers</span>
+<span class="text-outline text-[10px]">• 5 min read</span>
+</div>
+</div>
+<!-- Story Card 2 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Coffee shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two sets of hands holding warm ceramic mugs across a rustic wooden cafe table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8SzXx6mkmcFkWKdsX7Ci_x0mHgK8Q_omx4SppUzFKFZ8UFm7txgmSPvAseaujfLTfOhsdCLo3vSvhmt1GCHGBKNzIK6wL-mWqorO31Y33fcM2DV0_MvyhOX-iLR9hTPCZRoWFLelkPqskGKT7YJ1OSdSlByLBIhUoAwMA1L-lJPuobBSv7HrdC_BUaxzybJq9Gz8MBYxj11vg7-02hbwlPi2aEYo2KCc_iJl6813VbcAU3-F8Pki5twntkEaKXHyKTNFbhrY1gGmK"/>
+</div>
+<span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2">Conversation</span>
+<h3 class="text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:underline decoration-primary decoration-2 underline-offset-4">The Coffee Shop Compact</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm line-clamp-3 mb-6">My brother and I made a pact: no morbid talk, just pure honesty about what we wanted our final chapters to look like.</p>
+<div class="mt-auto flex items-center gap-3">
+<img alt="David K." class="w-8 h-8 rounded-full object-cover" data-alt="Man with a beard and contemplative expression looking away from the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb7rBjjq0TflU933EGKjRrx2VlhNigxTveDgUmpL_4CNQifU6IJseNKkVuPX_d2vPJtdGnTEuOu10fbwvqnBdHOLaspIxOlToTS-7nTw2ulGudcq2Jx2o5VNOqq1dQzHWv2XB2s6i237-IxbEVv9zeMEaRG4BaWRCNFNF0pDBdPT8PsQ90kLejKFGfMb3V6KUTGZ-pRdiNCpt9o169dfiFiTYH4gEmoU6kJ0X2jbyO2I4EMRhYISSKrvuQl4rBS1gVlnHzv5Ni12Z1"/>
+<span class="text-xs font-semibold text-on-surface">David Kim</span>
+<span class="text-outline text-[10px]">• 12 min read</span>
+</div>
+</div>
+<!-- Story Card 3 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Writing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a fountain pen resting on a blank high-quality paper notebook with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsxJwupgMTOi4kxACf_hBbZE05JDKIPgqRItK_rswr_52fdyWtJEjZlaabVxYyZp-KbJAUQVySacG1SQ5IuW-ykEo9kRZe-ue00XO6dLFiMvYy6EjCuemybln6JJYbcNrFAPV_m8eUtmtmhHiaCw5hGxgECQctFUA_crrFIhI2jNim3MpFUEsm7-bhzzcPwL7GUVf5wJO1T_UOQo4eGUs85x6e64FYzzAdIwZRaJxCnZj6mhhSXlUPekAmrWV43uJkD71JWbsF4xCK"/>
+</div>
+<span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2">Creative</span>
+<h3 class="text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:underline decoration-primary decoration-2 underline-offset-4">The Letter I Wish I'd Written</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm line-clamp-3 mb-6">Reflections on the things left unsaid and why I'm starting my legacy letter project today for my children.</p>
+<div class="mt-auto flex items-center gap-3">
+<img alt="Thomas B." class="w-8 h-8 rounded-full object-cover" data-alt="Mature man with glasses and a warm, knowing smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb73omMg39hbtz5f0j4VM_I1ux5EJcFyLfFIuGCEcSo9IIx4hcjRO6aMRbOfptcGD6EmVNYzkq0UL63S7xQBO-BS3vu781fKCmWc0FBwhyQJwlACpk_OTVTmdrf9fFoPNNQmivFBRh5G-WJv4KXlrkHdKNfyao8H42KYrj1fEET6qicCJlRc4OwB0FJL4br3kNq-dNL_BGDFemspkOk87Ow6ksEqDLbrVajylerE-8BsWwUdmF1my4oE0uW_I69emPtrksKQwOrIVI"/>
+<span class="text-xs font-semibold text-on-surface">Thomas Baines</span>
+<span class="text-outline text-[10px]">• 6 min read</span>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex justify-center">
+<button class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-surface-container-highest transition-colors">Load more stories</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl border-t-[0.5px] border-stone-200/15 md:hidden">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Advocate</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Workshop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#436438] dark:text-[#6B8F5E] scale-110 transition-transform tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Stories</span>
+</a>
+</nav>
+<!-- Navigation Drawer (Desktop Secondary) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-screen w-20 z-[60] flex-col p-6 items-center justify-center gap-12 bg-[#fcf9f8] dark:bg-stone-950 border-r border-outline-variant/10">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-auto">
+<span class="material-symbols-outlined text-white" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex flex-col gap-8 flex-1 justify-center">
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer" data-icon="auto_stories" title="Editorial Hub">auto_stories</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer" data-icon="volunteer_activism" title="Advocate Portal">volunteer_activism</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer" data-icon="Psychology" title="Values Workshop">psychology</span>
+<span class="material-symbols-outlined text-primary" data-icon="forum" style="font-variation-settings: 'FILL' 1;" title="Community Stories">forum</span>
+</div>
+<div class="mt-auto">
+<span class="material-symbols-outlined text-stone-400" data-icon="settings">settings</span>
+</div>
+</aside>
+</body></html>

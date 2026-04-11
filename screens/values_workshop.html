@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Values Workshop | Sage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#022100",
+                    "secondary-container": "#e4e2e1",
+                    "primary": "#436438",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#aad19b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed": "#191c1b",
+                    "on-surface-variant": "#43483f",
+                    "tertiary-fixed": "#e1e3e0",
+                    "on-primary-container": "#f8ffef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "primary-container": "#5b7e4e",
+                    "tertiary-fixed-dim": "#c5c7c4",
+                    "surface-container": "#f0eded",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed-variant": "#444746",
+                    "outline-variant": "#c3c8bc",
+                    "on-secondary-container": "#656464",
+                    "surface-bright": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "outline": "#73796e",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed": "#c6eeb5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#595d5b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#45673a",
+                    "background": "#fcf9f8",
+                    "inverse-primary": "#aad19b",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#2e4f24",
+                    "on-secondary-fixed-variant": "#474747",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#727573",
+                    "secondary": "#5f5e5e",
+                    "on-tertiary-container": "#fbfdfa",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl">
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a calm, professional woman with soft natural lighting and a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw3-fcbuTADSKWjvLlBJglamV-rFeGuiWwM9dIIpOWzcZ_NFYWsmrHHKtJvZ-ZKeReWgcJyrJXsWmwCUD6G0YkTYIiObEHyaMT0g3FCiKzeidMNi12YJ2t8v0GFKJTcDWf7yk8l_Szoa8lu3KRls2hA5bJ6s0XSAKNvP16i7nAJi85sInveJBwhmER3NLTnk90KOI2gcgoNlEEIBGms1PdnteyEnjZadVtXG3UwJMtz9tFIYiATS5JtNvHhFPAlGEdlgL8MCo1GvRD"/>
+</div>
+<span class="text-2xl font-semibold tracking-tighter text-[#436438] dark:text-[#6B8F5E] font-inter">Sage</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-500 dark:text-stone-400 hover:opacity-70 transition-opacity duration-300 font-inter text-sm tracking-wide uppercase" href="#">Editorial Hub</a>
+<a class="text-stone-500 dark:text-stone-400 hover:opacity-70 transition-opacity duration-300 font-inter text-sm tracking-wide uppercase" href="#">Advocate Portal</a>
+<a class="text-[#436438] dark:text-[#6B8F5E] font-medium hover:opacity-70 transition-opacity duration-300 font-inter text-sm tracking-wide uppercase" href="#">Values Workshop</a>
+<a class="text-stone-500 dark:text-stone-400 hover:opacity-70 transition-opacity duration-300 font-inter text-sm tracking-wide uppercase" href="#">Community Stories</a>
+</div>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined text-[#436438]" data-icon="search">search</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Editorial Focus -->
+<header class="mb-20 max-w-3xl">
+<h1 class="text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-6 leading-tight">
+                Identify what <span class="text-primary italic">truly</span> matters.
+            </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                Welcome to the Values Workshop. This is a quiet space for introspection. Explore the anchors of your character and rank them to see the shape of your personal philosophy.
+            </p>
+</header>
+<!-- Values Selection Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<!-- Category Card: Relationships -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low p-8 h-[400px] flex flex-col justify-end">
+<img alt="Spending time with family" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Golden hour lighting hitting a family walking together through a tall grass meadow with soft focus and warm emotional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADUJnt7N0fObf50jQjhsxoQZF8sl7kzAT3zdIzBRW3F9C8P1ANHYdVJ9itdqKkJ6YI3ucL09TJzGRZcoHHAFui_wJrckp57IN9kqc-B727BRwh6f1y2igeJu_P-uM4mXAAk1CICnMfMkxlo3pxdYWGGJRmaYwHRWvO-loSksedbgOh6jVo3Tl0jI0WvNAV_Gv2C0inhgDYWIXsJ0ru8Rd296idS-2kAUUkemnjreBZjod2NOhFyNM2jfSZDt04uYoTc9P3yJ8NL7aL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="relative z-10">
+<span class="text-xs uppercase tracking-[0.2em] text-white/80 mb-2 block">Priority One</span>
+<h3 class="text-3xl font-bold text-white mb-4">Spending time with family</h3>
+<div class="flex gap-4">
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-on-surface transition-colors">Select Anchor</button>
+</div>
+</div>
+</div>
+<!-- Category Card: Inner Peace -->
+<div class="md:col-span-4 bg-[#436438] rounded-xl p-8 flex flex-col justify-between text-on-primary-container">
+<span class="material-symbols-outlined text-4xl" data-icon="self_improvement">self_improvement</span>
+<div>
+<h3 class="text-2xl font-semibold mb-3 tracking-tight">Spiritual peace</h3>
+<p class="text-sm opacity-80 leading-relaxed mb-6">Finding alignment between your inner world and outer actions.</p>
+<button class="w-full bg-primary-fixed text-on-primary-fixed py-3 rounded-md font-medium text-sm hover:opacity-90 transition-opacity">Prioritize</button>
+</div>
+</div>
+<!-- Category Card: Avoidance of Pain -->
+<div class="md:col-span-4 bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-stone-500" data-icon="shield">shield</span>
+<span class="text-[10px] font-bold tracking-widest uppercase text-stone-400">Protective</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Avoidance of pain</h3>
+<p class="text-sm text-on-surface-variant mb-6">Minimizing suffering and creating a sanctuary of safety.</p>
+<button class="text-primary font-semibold text-sm flex items-center gap-2 group">
+                        Explore Depth 
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Small Interactive Cards -->
+<div class="md:col-span-4 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant/15">
+<span class="material-symbols-outlined mb-2 text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-semibold tracking-tight uppercase">Creativity</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant/15">
+<span class="material-symbols-outlined mb-2 text-primary" data-icon="work">work</span>
+<span class="text-xs font-semibold tracking-tight uppercase">Legacy</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant/15">
+<span class="material-symbols-outlined mb-2 text-primary" data-icon="public">public</span>
+<span class="text-xs font-semibold tracking-tight uppercase">Contribution</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant/15">
+<span class="material-symbols-outlined mb-2 text-primary" data-icon="balance">balance</span>
+<span class="text-xs font-semibold tracking-tight uppercase">Integrity</span>
+</div>
+</div>
+<!-- Deep Reflection Area -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Intellectual growth" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-40" data-alt="Minimalist architectural stairs leading upward into bright light, symbolizing growth and intellectual clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlupbiUB-4q_zLNqLwplBhQo4HOl15nzQfdK2uGDAm14giNQF9x94lk_JINA6gQQKjaetYfwnygcnXQ1l9s0oGO24NK0mXEBGjUPM3WT6uzbqQNmuBwS6Ul5anXlYqFtRWFBEBkkIc_iCp-mw8RoHDfFlXjk8rETpp3A_qaqXNdgwOAdUYwr6oP5mSqRg5-QFflldmwW4axdXbqMwWXP5RgTFzolcEqKB009RSrFhak4PgxA2-p0Ian_VD-SVFf3DSkZeL9PsLDYbh"/>
+<div class="relative p-8 h-full flex flex-col justify-between">
+<h3 class="text-xl font-bold">Growth</h3>
+<p class="text-sm text-on-surface-variant font-light italic">"The only constant is change."</p>
+</div>
+</div>
+</section>
+<!-- Ranking Interface (Tonal Layering) -->
+<section class="bg-surface-container-low rounded-full p-12 mb-24">
+<div class="max-w-xl mx-auto text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tight mb-4">Your Philosophy Canvas</h2>
+<p class="text-on-surface-variant text-sm">Drag and drop to rank your primary anchors. This data is private to your journey.</p>
+</div>
+<div class="space-y-4 max-w-2xl mx-auto">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-5 rounded-xl shadow-[20px_40px_40px_rgba(0,0,0,0.02)] group hover:ring-1 ring-primary/20 transition-all cursor-grab">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed text-xs font-bold">1</span>
+<span class="flex-grow font-medium">Spending time with family</span>
+<span class="material-symbols-outlined text-stone-300" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-5 rounded-xl shadow-[20px_40px_40px_rgba(0,0,0,0.02)] group hover:ring-1 ring-primary/20 transition-all cursor-grab">
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant text-xs font-bold">2</span>
+<span class="flex-grow font-medium">Spiritual peace</span>
+<span class="material-symbols-outlined text-stone-300" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-5 rounded-xl shadow-[20px_40px_40px_rgba(0,0,0,0.02)] group hover:ring-1 ring-primary/20 transition-all cursor-grab">
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant text-xs font-bold">3</span>
+<span class="flex-grow font-medium">Intellectual Growth</span>
+<span class="material-symbols-outlined text-stone-300" data-icon="drag_indicator">drag_indicator</span>
+</div>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer (Hidden on mobile, desktop visible logic handled by flex/hidden) -->
+<aside class="hidden xl:flex fixed left-0 top-0 h-screen w-80 z-[60] bg-[#fcf9f8] dark:bg-stone-950 flex-col p-6 rounded-r-2xl shadow-[20px_40px_40px_rgba(0,0,0,0.05)]">
+<div class="mb-12 pl-4">
+<h2 class="text-xl font-bold text-[#436438] font-inter">Ecosystem</h2>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-900 mx-2 rounded-md transition-colors font-inter text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Editorial Hub</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-900 mx-2 rounded-md transition-colors font-inter text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+<span>Advocate Portal</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-[#436438] text-white dark:bg-[#6B8F5E] rounded-md mx-2 transition-transform scale-95 active:scale-100 font-inter text-sm tracking-wide uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="Psychology">psychology</span>
+<span>Values Workshop</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-900 mx-2 rounded-md transition-colors font-inter text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span>Community Stories</span>
+</a>
+</nav>
+<div class="pt-8 border-t border-stone-200/20">
+<div class="bg-surface-container-low p-6 rounded-xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2">Daily Insight</p>
+<p class="text-sm font-light leading-relaxed">"Values are not what we say, but what we do when things get difficult."</p>
+</div>
+</div>
+</aside>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl border-t-[0.5px] border-stone-200/15">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Advocate</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#436438] dark:text-[#6B8F5E] scale-110 transition-transform tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Workshop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity tap-highlight-none active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase">Stories</span>
+</a>
+</nav>
+</body></html>

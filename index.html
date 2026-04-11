@@ -3,1266 +3,1017 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quality of Death — Advance Care Planning Education</title>
-  <meta name="description" content="Quality of death is a clinical outcome. The US ranks 43rd. It starts with a conversation.">
+  <title>Quality Death — Die Well. On Your Terms.</title>
+  <meta name="description" content="75% of Americans want to die at home. Only 30% do. The gap isn't medical — it's a conversation that never happened. Quality Death helps you have it.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #436438;
+      --green-dark: #2d4424;
+      --green-deeper: #1a2a15;
+      --green-light: #c6eeb5;
+      --green-mid: #aad19b;
+      --cream: #fcf9f8;
+      --warm-white: #f6f3f2;
+      --text: #1c1b1b;
+      --text-mid: #43483f;
+      --text-light: #73796e;
+      --border: #c3c8bc;
+      --shadow: rgba(67, 100, 56, 0.18);
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
       line-height: 1.7;
-      color: #1a1a1a;
-      background: #fafafa;
+      color: var(--text);
+      background: var(--cream);
       -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
     }
 
-    .container {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 80px 24px 120px;
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--green-deeper);
+      border-bottom: 1px solid rgba(198,238,181,0.12);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
     }
 
-    a {
-      color: #6B8F5E;
+    .nav-brand {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green-light);
+      letter-spacing: -0.01em;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 64px;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: 14px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #6B8F5E;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    .subtitle {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 0;
-    }
-
-    .personal {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.8;
-    }
-
-    ul {
+    .nav-links {
+      display: flex;
+      gap: 28px;
       list-style: none;
-      padding: 0;
     }
 
-    ul li {
-      margin-bottom: 14px;
-      color: #333;
-    }
-
-    li strong {
+    .nav-links a {
+      font-size: 13px;
       font-weight: 500;
-      color: #1a1a1a;
-    }
-
-    .sep {
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: #ddd;
-      margin: 48px 0;
-    }
-
-    .stat {
-      padding-left: 16px;
-      border-left: 2px solid #6B8F5E;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .stat strong {
-      font-weight: 500;
-      color: #1a1a1a;
-    }
-
-    .question {
-      font-style: italic;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    .script {
-      padding: 16px 20px;
-      background: #f5f7f4;
-      border-radius: 6px;
-      margin-bottom: 14px;
-      color: #333;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .covers-item {
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    .covers-item strong {
-      font-weight: 500;
-      color: #1a1a1a;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .covers-item span {
-      font-size: 15px;
-      color: #555;
-    }
-
-    .pull-quote {
-      font-size: 15px;
-      font-style: italic;
-      color: #555;
-      padding-left: 16px;
-      border-left: 2px solid #6B8F5E;
-      margin: 24px 0;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 12px 28px;
-      background: #6B8F5E;
-      color: #fff;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-
-    .cta:hover {
-      background: #5a7a4f;
+      color: rgba(198,238,181,0.75);
       text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
     }
 
-    .resources li {
+    .nav-links a:hover { color: var(--green-light); }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green-deeper) !important;
+      background: var(--green-light);
+      padding: 6px 16px;
+      border-radius: 100px;
+      text-decoration: none !important;
+      transition: background 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--green-mid) !important; }
+
+    /* HERO */
+    .hero {
+      background: var(--green-deeper);
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(67,100,56,0.4) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(45,68,36,0.5) 0%, transparent 50%);
+      padding: 96px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23436438' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .hero-inner { max-width: 720px; margin: 0 auto; position: relative; }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      border: 1px solid rgba(170,209,155,0.3);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--green-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.72);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: background 0.15s, transform 0.1s;
+      box-shadow: 0 4px 20px rgba(67,100,56,0.4);
+    }
+
+    .btn-primary:hover { background: #5b7e4e; transform: translateY(-1px); }
+
+    .hero-disclaimer {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.02em;
+    }
+
+    /* STATS SECTION */
+    .stats-section {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px;
+    }
+
+    .stats-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .stats-lead {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .stats-lead h2 {
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .stats-lead p {
+      font-size: 15px;
+      color: var(--text-mid);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.04em;
+      line-height: 1;
       margin-bottom: 10px;
     }
 
-    footer {
-      margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: #888;
-      margin-bottom: 8px;
-    }
-
-    footer a {
-      color: #888;
-    }
-
-    /* Interactive Conversation Tool */
-    .conversation-tool {
-      background: #fff;
-      border-radius: 8px;
-      padding: 40px 32px;
-      border: 1px solid #e5e5e5;
-    }
-
-    .conversation-tool .privacy-notice {
-      font-size: 13px;
-      color: #888;
-      margin-bottom: 32px;
-      padding: 10px 14px;
-      background: #f9faf8;
-      border-radius: 4px;
-      border-left: 2px solid #6B8F5E;
-    }
-
-    .conversation-tool .progress-bar {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 36px;
-    }
-
-    .conversation-tool .progress-dot {
-      flex: 1;
-      height: 3px;
-      background: #e5e5e5;
-      border-radius: 2px;
-      transition: background 0.4s ease;
-    }
-
-    .conversation-tool .progress-dot.completed {
-      background: #6B8F5E;
-    }
-
-    .conversation-tool .progress-dot.active {
-      background: #8aad7e;
-    }
-
-    .question-screen {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .question-screen.visible {
-      display: block;
-      opacity: 1;
-    }
-
-    .question-screen.fade-out {
-      display: block;
-      opacity: 0;
-    }
-
-    .question-number {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6B8F5E;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    .question-text {
-      font-size: 20px;
-      font-weight: 500;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-      line-height: 1.5;
-    }
-
-    .question-why {
+    .stat-label {
       font-size: 14px;
-      color: #888;
-      margin-bottom: 28px;
-      line-height: 1.6;
+      font-weight: 500;
+      color: var(--text-mid);
+      line-height: 1.4;
     }
 
-    .question-explanation {
-      font-size: 13px;
-      color: #999;
-      margin-top: 16px;
-      line-height: 1.6;
-      padding: 12px 14px;
-      background: #fafafa;
-      border-radius: 4px;
+    /* APP SCREENS */
+    .screens-section {
+      padding: 80px 24px;
+      background: var(--warm-white);
     }
 
-    .conversation-tool textarea {
-      width: 100%;
-      min-height: 100px;
-      padding: 14px 16px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
       font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-      resize: vertical;
-      transition: border-color 0.2s;
-      background: #fafafa;
+      color: var(--text-mid);
     }
 
-    .conversation-tool textarea:focus {
-      outline: none;
-      border-color: #6B8F5E;
+    /* Screen Tabs */
+    .screen-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .tab-btn {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-light);
       background: #fff;
-    }
-
-    .conversation-tool input[type="text"] {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #333;
-      transition: border-color 0.2s;
-      background: #fafafa;
-    }
-
-    .conversation-tool input[type="text"]:focus {
-      outline: none;
-      border-color: #6B8F5E;
-      background: #fff;
-    }
-
-    .conversation-tool select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #333;
-      background: #fafafa;
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: 100px;
       cursor: pointer;
-      -webkit-appearance: none;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
+      transition: all 0.15s;
+      letter-spacing: 0.01em;
     }
 
-    .conversation-tool select:focus {
-      outline: none;
-      border-color: #6B8F5E;
+    .tab-btn:hover {
+      border-color: var(--green);
+      color: var(--green);
     }
 
-    .proxy-fields {
+    .tab-btn.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+
+    /* Phone Frame */
+    .phone-showcase {
       display: flex;
-      gap: 12px;
-      margin-bottom: 8px;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 32px;
     }
 
-    .proxy-fields input {
-      flex: 2;
+    .phone-frame-wrap {
+      position: relative;
+      flex-shrink: 0;
     }
 
-    .proxy-fields select {
-      flex: 1;
+    .phone-frame {
+      width: 320px;
+      height: 640px;
+      border: 8px solid var(--green-dark);
+      border-radius: 40px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow:
+        0 0 0 1px rgba(67,100,56,0.25),
+        0 24px 60px var(--shadow),
+        0 8px 20px rgba(0,0,0,0.12);
+      position: relative;
     }
 
-    .option-group {
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 26px;
+      background: var(--green-dark);
+      border-radius: 0 0 16px 16px;
+      z-index: 10;
+    }
+
+    .phone-frame iframe {
+      width: 390px;
+      height: 780px;
+      border: none;
+      transform: scale(0.8205);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+
+    .screen-caption {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+      letter-spacing: 0.02em;
+    }
+
+    /* FEATURES */
+    .features-section {
+      padding: 80px 24px;
+      background: #fff;
+    }
+
+    .features-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .feature-card {
+      background: #fff;
+      padding: 36px 32px;
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(67,100,56,0.1);
+      border-radius: 10px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--green);
+    }
+
+    .feature-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* HARD TRUTHS */
+    .truths-section {
+      padding: 80px 24px;
+      background: var(--green-deeper);
+    }
+
+    .truths-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .truths-section .section-eyebrow {
+      color: var(--green-mid);
+    }
+
+    .truths-section h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    .truths-section h2 em {
+      font-style: normal;
+      color: var(--green-light);
+    }
+
+    .truth-block {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(198,238,181,0.15);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .truth-block p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+    }
+
+    .truth-block strong {
+      color: var(--green-light);
+      font-weight: 600;
+    }
+
+    /* CONNECT SECTION */
+    .connect-section {
+      padding: 72px 24px;
+      background: var(--warm-white);
+      border-top: 1px solid var(--border);
+    }
+
+    .connect-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .connect-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .connect-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .connect-card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      border: 1.5px solid var(--green);
+      padding: 8px 20px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    /* SAGE PERSISTENT BAR qualitydeath */
+    .sage-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--green-deeper);
+      border-top: 1px solid rgba(198,238,181,0.2);
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
+    }
+
+    .sage-bar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
       gap: 10px;
     }
 
-    .option-btn {
-      display: block;
-      width: 100%;
-      padding: 14px 18px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background: #fafafa;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #333;
-      text-align: left;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      line-height: 1.5;
+    .sage-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse 2.4s ease-in-out infinite;
     }
 
-    .option-btn:hover {
-      border-color: #6B8F5E;
-      background: #f5f7f4;
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
     }
 
-    .option-btn.selected {
-      border-color: #6B8F5E;
-      background: #f0f5ee;
-      color: #1a1a1a;
-      font-weight: 500;
+    .sage-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green-mid);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
     }
 
-    .option-btn.multi-select.selected {
-      border-color: #6B8F5E;
-      background: #f0f5ee;
-    }
-
-    .multi-hint {
-      font-size: 13px;
-      color: #999;
-      margin-bottom: 10px;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 32px;
-    }
-
-    .btn-back {
-      padding: 10px 20px;
-      border: none;
-      background: none;
-      color: #888;
-      font-family: 'Inter', sans-serif;
+    .sage-input {
+      flex: 1;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(198,238,181,0.2);
+      border-radius: 100px;
+      padding: 9px 18px;
       font-size: 14px;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .btn-back:hover {
-      color: #555;
-    }
-
-    .btn-next {
-      padding: 12px 28px;
-      border: none;
-      background: #6B8F5E;
+      font-family: 'Inter', sans-serif;
       color: #fff;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .sage-input::placeholder { color: rgba(255,255,255,0.4); }
+    .sage-input:focus {
+      border-color: rgba(198,238,181,0.5);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .sage-send {
+      flex-shrink: 0;
+      background: var(--green);
+      border: none;
+      border-radius: 100px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
       cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .btn-next:hover {
-      background: #5a7a4f;
-    }
-
-    .btn-next:disabled {
-      background: #ccc;
-      cursor: default;
-    }
-
-    .btn-start-over {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 20px;
-      border: 1px solid #ddd;
-      background: #fff;
-      color: #666;
-      border-radius: 6px;
+      transition: background 0.15s;
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      cursor: pointer;
+    }
+
+    .sage-send:hover { background: #5b7e4e; }
+    .sage-send:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .sage-response-bar {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+      min-height: 0;
       transition: all 0.2s;
     }
 
-    .btn-start-over:hover {
-      border-color: #999;
-      color: #333;
+    .sage-response-bar.visible { min-height: 32px; }
+
+    /* FOOTER */
+    footer {
+      background: var(--green-deeper);
+      padding: 40px 24px;
+      border-top: 1px solid rgba(198,238,181,0.12);
+      margin-bottom: 0;
     }
 
-    /* Results screen */
-    .results-screen {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .results-screen.visible {
-      display: block;
-      opacity: 1;
-    }
-
-    .results-header {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-
-    .results-header h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 6px;
-    }
-
-    .results-date {
-      font-size: 13px;
-      color: #888;
-    }
-
-    .results-section {
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .results-section:last-of-type {
-      border-bottom: none;
-    }
-
-    .results-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #6B8F5E;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-
-    .results-value {
-      font-size: 15px;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    .results-proxy {
-      padding: 16px 18px;
-      background: #f5f7f4;
-      border-radius: 6px;
-      border-left: 3px solid #6B8F5E;
-      margin-bottom: 24px;
-    }
-
-    .results-proxy .results-label {
-      margin-bottom: 4px;
-    }
-
-    .results-proxy .proxy-name {
-      font-size: 17px;
-      font-weight: 500;
-      color: #1a1a1a;
-    }
-
-    .results-proxy .proxy-relationship {
-      font-size: 14px;
-      color: #666;
-    }
-
-    .results-legal-notice {
-      padding: 16px 18px;
-      background: #fffbf0;
-      border-radius: 6px;
-      border-left: 3px solid #c9a84c;
-      margin: 28px 0;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .results-legal-notice strong {
-      color: #1a1a1a;
-      font-weight: 600;
-    }
-
-    .results-conversation-prompt {
-      padding: 20px;
-      background: #f5f7f4;
-      border-radius: 6px;
-      margin: 28px 0;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    .results-conversation-prompt strong {
-      font-weight: 500;
-      color: #1a1a1a;
-    }
-
-    .results-actions {
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      justify-content: space-between;
       align-items: center;
-      margin-top: 32px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .btn-print {
-      display: inline-block;
-      padding: 12px 28px;
-      border: none;
-      background: #6B8F5E;
-      color: #fff;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
+    .footer-brand {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-light);
     }
 
-    .btn-print:hover {
-      background: #5a7a4f;
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
     }
 
-    @media print {
-      body {
-        background: #fff;
-        font-size: 14px;
-      }
-      .container {
-        max-width: 100%;
-        padding: 20px;
-      }
-      section:not(#conversation-section),
-      .sep,
-      footer,
-      .nav-buttons,
-      .results-actions,
-      .privacy-notice,
-      .progress-bar,
-      .question-screen {
-        display: none !important;
-      }
-      #conversation-section {
-        margin: 0;
-      }
-      #conversation-section h2 {
-        display: none;
-      }
-      .conversation-tool {
-        border: none;
-        padding: 0;
-      }
-      .results-screen.visible {
-        display: block !important;
-        opacity: 1 !important;
-      }
-      .results-legal-notice {
-        border: 1px solid #c9a84c;
-      }
-      .results-proxy {
-        border: 1px solid #6B8F5E;
-      }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(198,238,181,0.6);
+      text-decoration: none;
     }
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 48px 20px 80px;
-      }
+    .footer-links a:hover { color: var(--green-light); }
 
-      h1 {
-        font-size: 22px;
-      }
+    .footer-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      margin-top: 20px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      section {
-        margin-bottom: 48px;
-      }
-
-      .conversation-tool {
-        padding: 28px 20px;
-      }
-
-      .question-text {
-        font-size: 18px;
-      }
-
-      .proxy-fields {
-        flex-direction: column;
-      }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-card { padding: 24px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .connect-inner { grid-template-columns: 1fr; }
+      .phone-frame { width: 280px; height: 560px; }
+      .phone-frame iframe { transform: scale(0.718); }
+      .sage-label { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <section>
-      <h1>Quality of Death Is a Measure. Not a Metaphor.</h1>
-      <p class="subtitle">The Economist Intelligence Unit ranks countries on how well they die. The US ranks 43rd. We can do better — and it starts with a conversation.</p>
-    </section>
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-brand">Quality Death</a>
+    <ul class="nav-links">
+      <li><a href="#app">The App</a></li>
+      <li><a href="#features">How It Works</a></li>
+      <li><a href="#truths">Why It Matters</a></li>
+      <li><a href="#connect">Connected Care</a></li>
+    </ul>
+    <a href="#sage-input" class="nav-cta nav-links">Start the Conversation</a>
+  </nav>
 
-    <span class="sep"></span>
-
-    <section>
-      <p class="personal">I went to medical school expecting to learn how to save lives. Nobody taught us how to help people die well. That's not a failure of medicine — it's a failure of conversation.</p>
-      <p class="personal">The families I've worked with who had the best outcomes at the end weren't the ones with the best doctors. They were the ones who had talked about it beforehand.</p>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>What Quality of Death Means</h2>
-      <p>Quality of death measures whether people die in the setting they choose, with the care they want, after conversations that matter. It is a clinical outcome, tracked by researchers and health systems worldwide.</p>
-
-      <div class="stat"><strong>Do you die where you want to?</strong> 80% want to die at home. 60% die in hospitals.</div>
-      <div class="stat"><strong>Are your wishes documented?</strong> Only 37% of adults have an advance directive.</div>
-      <div class="stat"><strong>Does your family know your preferences?</strong> Most don't — and the cost is measured in guilt, conflict, and unwanted interventions.</div>
-      <div class="stat"><strong>Is pain managed?</strong> Palliative care reduces suffering and extends life — but only 14% of eligible patients receive it.</div>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>The Conversation That Changes Everything</h2>
-      <p>Advance care planning is not about death. It's about clarity.</p>
-
-      <p class="question">What matters most to you in the last chapter of your life?</p>
-      <p class="question">Who should make decisions when you can't?</p>
-      <p class="question">What treatments would you want — and which would you refuse?</p>
-      <p class="question">Where do you want to be cared for?</p>
-
-      <p>These conversations take 30 minutes. They save families from years of regret.</p>
-
-      <a class="cta" href="https://caregoals.com">Start your advance care planning conversation with Sage AI</a>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>How to Start the Conversation</h2>
-      <p>Most people don't avoid this conversation because they don't care. They avoid it because they don't know what to say. Here are words that work.</p>
-
-      <div class="script">"I was reading something about advance directives and it made me think — have we ever talked about what you'd want if something happened?"</div>
-
-      <div class="script">"Mom, I don't want to be in a position where I'm guessing what you'd want. Can we talk about it so I know?"</div>
-
-      <div class="script">"I filled out my own advance directive last week. It took 20 minutes. Want to do yours together?"</div>
-
-      <div class="script">"The hospital asked me about my wishes when I had my procedure. It made me realize I should ask you about yours."</div>
-
-      <div class="script">"I'm not saying anything is wrong. I just want to know what matters to you — so if I ever have to speak for you, I get it right."</div>
-
-      <p>You don't need a perfect moment. You just need to start.</p>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>What an Advance Directive Actually Covers</h2>
-      <p>An advance directive is not a death sentence. It's instructions. Like a will, but for your body instead of your things.</p>
-
-      <div class="covers-item">
-        <strong>CPR preferences</strong>
-        <span>Not just "do everything" or "do nothing" — there are options in between.</span>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Advance Care Planning, Powered by Sage AI</span>
+      <h1>You deserve a <em>good death.</em></h1>
+      <p class="hero-sub">
+        Quality Death helps you define what that means — for yourself, on your own terms —
+        before someone else decides for you.
+      </p>
+      <div class="hero-actions">
+        <a href="#sage-input" class="btn-primary">Start the conversation</a>
+        <span class="hero-disclaimer">Advance care planning &nbsp;·&nbsp; Values clarification &nbsp;·&nbsp; Powered by Sage AI</span>
       </div>
+    </div>
+  </section>
 
-      <div class="covers-item">
-        <strong>Mechanical ventilation</strong>
-        <span>Whether you'd want a breathing machine, and for how long.</span>
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stats-lead">
+        <h2>75% of Americans say they want to die at home. Only 30% do.</h2>
+        <p>The gap isn't medical. It's a conversation that never happened.</p>
       </div>
-
-      <div class="covers-item">
-        <strong>Artificial nutrition and hydration</strong>
-        <span>Feeding tubes — when they help, when they don't, and what you'd choose.</span>
-      </div>
-
-      <div class="covers-item">
-        <strong>Who makes decisions when you can't</strong>
-        <span>Your healthcare proxy or power of attorney — the person who speaks for you.</span>
-      </div>
-
-      <div class="covers-item">
-        <strong>Comfort care preferences</strong>
-        <span>Pain management, where you want to be, what brings you peace.</span>
-      </div>
-
-      <div class="covers-item">
-        <strong>Organ donation wishes</strong>
-        <span>Your choice, documented clearly, so your family doesn't have to guess.</span>
-      </div>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>The Cost of Not Having This Conversation</h2>
-      <p>When families haven't talked about it, the default is "do everything." And "everything" often means: CPR that breaks ribs. Intubation. ICU for weeks. Decisions made by exhausted family members in a hospital hallway at 3am.</p>
-      <p>That's not care. That's chaos.</p>
-
-      <div class="stat">The average ICU stay costs <strong>$4,000 to $10,000 per day</strong>.</div>
-      <div class="stat">A 30-minute conversation costs <strong>nothing</strong> — and prevents the interventions most people don't actually want.</div>
-
-      <p class="pull-quote">The greatest act of love is not fighting death at all costs. It's knowing someone well enough to honor what they'd choose.</p>
-    </section>
-
-    <span class="sep"></span>
-
-    <section>
-      <h2>The Data</h2>
-      <div class="stat">Patients with advance directives are <strong>3x more likely</strong> to die in their preferred setting.</div>
-      <div class="stat">Advance care planning reduces ICU stays by <strong>36%</strong> (BMJ, 2019).</div>
-      <div class="stat">Family satisfaction with end-of-life care improves by <strong>50%</strong> when wishes are documented.</div>
-      <div class="stat">Medicare reimburses ACP conversations (<strong>CPT 99497/99498</strong>) — most physicians don't bill for them.</div>
-    </section>
-
-    <span class="sep"></span>
-
-    <section id="conversation-section">
-      <h2>Start Your Conversation</h2>
-      <p>This guided experience walks you through the questions that matter most. It takes about 10 minutes. At the end, you'll have a summary you can print and share with your family.</p>
-
-      <div class="conversation-tool">
-        <div class="privacy-notice">
-          Nothing you enter here is stored, sent, or shared. This runs entirely in your browser. When you close this page, everything disappears.
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">75%</div>
+          <div class="stat-label">want to die at home, on their own terms</div>
         </div>
-
-        <div class="progress-bar" id="progressBar">
-          <div class="progress-dot" data-step="0"></div>
-          <div class="progress-dot" data-step="1"></div>
-          <div class="progress-dot" data-step="2"></div>
-          <div class="progress-dot" data-step="3"></div>
-          <div class="progress-dot" data-step="4"></div>
-          <div class="progress-dot" data-step="5"></div>
-          <div class="progress-dot" data-step="6"></div>
-          <div class="progress-dot" data-step="7"></div>
+        <div class="stat-card">
+          <div class="stat-number">30%</div>
+          <div class="stat-label">actually do — a gap driven by silence, not medicine</div>
         </div>
-
-        <!-- Question 1 -->
-        <div class="question-screen visible" data-question="0" id="q0">
-          <div class="question-number">Question 1 of 8</div>
-          <div class="question-text">What matters most to you in your daily life right now?</div>
-          <div class="question-why">This helps frame everything that follows. Your values drive your care preferences.</div>
-          <textarea id="answer-values" placeholder="Take your time. There's no right answer. What brings you joy, meaning, or peace?"></textarea>
-          <div class="nav-buttons">
-            <span></span>
-            <button class="btn-next" onclick="nextQuestion(0)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="question-screen" data-question="1" id="q1">
-          <div class="question-number">Question 2 of 8</div>
-          <div class="question-text">If you couldn't speak for yourself, who would you trust to make medical decisions for you?</div>
-          <div class="question-why">This person is called your healthcare proxy. They should know your wishes.</div>
-          <div class="proxy-fields">
-            <input type="text" id="answer-proxy-name" placeholder="Their name">
-            <select id="answer-proxy-relationship">
-              <option value="" disabled selected>Relationship</option>
-              <option value="Spouse/Partner">Spouse/Partner</option>
-              <option value="Child">Child</option>
-              <option value="Sibling">Sibling</option>
-              <option value="Friend">Friend</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(1)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(1)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="question-screen" data-question="2" id="q2">
-          <div class="question-number">Question 3 of 8</div>
-          <div class="question-text">If your heart stopped, would you want CPR?</div>
-          <div class="option-group" id="answer-cpr">
-            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">Yes, attempt CPR</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">Only if there's a reasonable chance of recovery</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">No, allow natural death</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-cpr')">I'm not sure yet</button>
-          </div>
-          <div class="question-explanation">CPR involves chest compressions and often electrical shocks. Ribs frequently break during the process. Success rates vary widely — in hospitals, about 25% survive to discharge. Outside hospitals, it's closer to 10%. Age and underlying conditions matter significantly.</div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(2)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(2)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 4 -->
-        <div class="question-screen" data-question="3" id="q3">
-          <div class="question-number">Question 4 of 8</div>
-          <div class="question-text">If you couldn't breathe on your own, would you want to be put on a breathing machine?</div>
-          <div class="option-group" id="answer-ventilator">
-            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Yes, for as long as needed</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Yes, but only for a limited trial (e.g., 2 weeks)</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">No, I would prefer comfort care</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-ventilator')">Not sure</button>
-          </div>
-          <div class="question-explanation">A ventilator is a machine that breathes for you through a tube placed in your throat. You cannot talk while on one. Some people recover and come off it within days. Others remain on it for weeks or longer. Some never come off.</div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(3)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(3)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 5 -->
-        <div class="question-screen" data-question="4" id="q4">
-          <div class="question-number">Question 5 of 8</div>
-          <div class="question-text">If you couldn't eat or drink, would you want a feeding tube?</div>
-          <div class="option-group" id="answer-feeding">
-            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Yes</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Only for a short trial</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">No</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-feeding')">Not sure</button>
-          </div>
-          <div class="question-explanation">Artificial nutrition is delivered through a tube into your stomach or through an IV. It can sustain life for months or years, but it doesn't reverse the underlying condition that caused the inability to eat. It is a medical intervention, not the same as eating.</div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(4)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(4)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 6 -->
-        <div class="question-screen" data-question="5" id="q5">
-          <div class="question-number">Question 6 of 8</div>
-          <div class="question-text">Where would you want to spend your final days?</div>
-          <div class="option-group" id="answer-location">
-            <button class="option-btn" onclick="selectOption(this, 'answer-location')">At home</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-location')">In a hospital</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-location')">In a hospice facility</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-location')">Wherever my family is</button>
-            <button class="option-btn" onclick="selectOption(this, 'answer-location')">I haven't thought about it</button>
-          </div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(5)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(5)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 7 -->
-        <div class="question-screen" data-question="6" id="q6">
-          <div class="question-number">Question 7 of 8</div>
-          <div class="question-text">Is there anything you would consider worse than death?</div>
-          <div class="multi-hint">Select all that apply, or none.</div>
-          <div class="option-group" id="answer-boundaries">
-            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being permanently unconscious</button>
-            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being in constant pain</button>
-            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Not recognizing my family</button>
-            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">Being completely dependent on others for basic care</button>
-            <button class="option-btn multi-select" onclick="toggleMulti(this, 'answer-boundaries')">None of these</button>
-          </div>
-          <div class="question-explanation">This question helps your proxy understand your boundaries. There are no right answers. Some people feel strongly about one of these. Others don't. What matters is that someone knows.</div>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(6)">Back</button>
-            <button class="btn-next" onclick="nextQuestion(6)">Continue</button>
-          </div>
-        </div>
-
-        <!-- Question 8 -->
-        <div class="question-screen" data-question="7" id="q7">
-          <div class="question-number">Question 8 of 8</div>
-          <div class="question-text">Is there anything else you want your family to know?</div>
-          <div class="question-why">This is your space. Some people write about funeral preferences. Others write love letters. There's no wrong answer.</div>
-          <textarea id="answer-final" placeholder="Whatever comes to mind. Or leave this blank — you can always come back to it."></textarea>
-          <div class="nav-buttons">
-            <button class="btn-back" onclick="prevQuestion(7)">Back</button>
-            <button class="btn-next" onclick="showResults()">See Your Summary</button>
-          </div>
-        </div>
-
-        <!-- Results -->
-        <div class="results-screen" id="resultsScreen">
-          <div class="results-header">
-            <h3>Your Advance Care Planning Summary</h3>
-            <div class="results-date" id="resultsDate"></div>
-          </div>
-
-          <div class="results-proxy" id="resultsProxy">
-            <div class="results-label">Healthcare Proxy</div>
-            <div class="proxy-name" id="resultsProxyName"></div>
-            <div class="proxy-relationship" id="resultsProxyRelationship"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">What Matters Most</div>
-            <div class="results-value" id="resultsValues"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">CPR Preference</div>
-            <div class="results-value" id="resultsCpr"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">Breathing Machine (Ventilator)</div>
-            <div class="results-value" id="resultsVentilator"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">Feeding Tube</div>
-            <div class="results-value" id="resultsFeeding"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">Preferred Location for Final Days</div>
-            <div class="results-value" id="resultsLocation"></div>
-          </div>
-
-          <div class="results-section">
-            <div class="results-label">Conditions Considered Worse Than Death</div>
-            <div class="results-value" id="resultsBoundaries"></div>
-          </div>
-
-          <div class="results-section" id="resultsFinalSection">
-            <div class="results-label">Additional Wishes</div>
-            <div class="results-value" id="resultsFinal"></div>
-          </div>
-
-          <div class="results-legal-notice">
-            <strong>This is NOT a legal document.</strong> It is a conversation starter. To make your wishes legally binding, discuss this summary with your physician and complete your state's official advance directive form.
-          </div>
-
-          <div class="results-conversation-prompt" id="resultsConversationPrompt">
-          </div>
-
-          <div class="results-actions">
-            <button class="btn-print" onclick="window.print()">Print This Summary</button>
-            <a class="cta" href="https://caregoals.com" style="text-align: center;">Want Sage AI to guide you through the full advance directive? Start at caregoals.com</a>
-            <button class="btn-start-over" onclick="startOver()">Start Over</button>
-          </div>
+        <div class="stat-card">
+          <div class="stat-number">90%</div>
+          <div class="stat-label">of families feel unprepared when the moment comes</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <span class="sep"></span>
+  <!-- APP SCREENS -->
+  <section class="screens-section" id="app">
+    <div class="section-header">
+      <span class="section-eyebrow">The App</span>
+      <h2>Every conversation, beautifully guided.</h2>
+      <p>Sage walks you through values, fears, and preferences — at whatever pace feels right.</p>
+    </div>
 
-    <section>
-      <h2>Resources</h2>
-      <ul class="resources">
-        <li><a href="https://theconversationproject.org">The Conversation Project</a></li>
-        <li><a href="https://fivewishes.org">Five Wishes</a></li>
-        <li><a href="https://polst.org">POLST</a></li>
-        <li><a href="https://eiuperspectives.economist.com">Economist Intelligence Unit: Quality of Death Index</a></li>
+    <div class="screen-tabs" role="tablist" aria-label="App screens">
+      <button class="tab-btn active" data-screen="welcome_to_sage" role="tab">Welcome to Sage</button>
+      <button class="tab-btn" data-screen="my_care_plan" role="tab">My Care Plan</button>
+      <button class="tab-btn" data-screen="guided_conversation" role="tab">Guided Conversation</button>
+      <button class="tab-btn" data-screen="values_workshop" role="tab">Values Workshop</button>
+      <button class="tab-btn" data-screen="summary_share" role="tab">Summary &amp; Share</button>
+      <button class="tab-btn" data-screen="educational_hub" role="tab">Educational Hub</button>
+      <button class="tab-btn" data-screen="advocate_portal" role="tab">Advocate Portal</button>
+      <button class="tab-btn" data-screen="community_stories" role="tab">Community Stories</button>
+    </div>
+
+    <div class="phone-showcase">
+      <div class="phone-frame-wrap">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <iframe
+            id="screen-frame"
+            src="/screens/welcome_to_sage.html"
+            title="App screen preview"
+            loading="lazy"
+            sandbox="allow-same-origin allow-scripts"
+          ></iframe>
+        </div>
+        <p class="screen-caption" id="screen-caption">Welcome to Sage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="section-header" style="max-width:960px; margin: 0 auto 0;">
+      <span class="section-eyebrow">How It Works</span>
+      <h2>Four things Sage does that no one else does.</h2>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
+        </div>
+        <h3>Guided Values Conversation</h3>
+        <p>Sage asks the questions your family can't. What matters most to you? What are you afraid of? What does "quality of life" mean — to <em>you</em>, specifically, right now?</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+          </svg>
+        </div>
+        <h3>Care Plan Generation</h3>
+        <p>Your values become a structured advance care plan — in plain language your family will actually understand. Not legalese. Not medical jargon. Your words.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+          </svg>
+        </div>
+        <h3>Advocate Portal</h3>
+        <p>Share a living summary with your healthcare proxy. They'll know exactly what to do when it matters — and exactly what you would have wanted. No guessing. No guilt.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+          </svg>
+        </div>
+        <h3>Community Stories</h3>
+        <p>Learn from people who've been through this. What they wish they'd said. What they're glad they did. Real stories — not statistics — that make the abstract feel possible.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HARD TRUTHS -->
+  <section class="truths-section" id="truths">
+    <div class="truths-inner">
+      <span class="section-eyebrow">Why This Matters</span>
+      <h2>The honest case for <em>having this conversation now.</em></h2>
+
+      <div class="truth-block">
+        <p>
+          <strong>The ICU is 40x more expensive per day than home care.</strong>
+          It's also where most people don't want to be.
+          And it's where most people who didn't plan end up anyway.
+        </p>
+      </div>
+
+      <div class="truth-block">
+        <p>
+          <strong>Completing an advance directive is free.</strong>
+          It takes 30 minutes. It works in all 50 states.
+          It is the most important thing you can do for the people you love.
+        </p>
+      </div>
+
+      <div class="truth-block">
+        <p>
+          <strong>The conversation itself is the intervention.</strong>
+          Studies show that families who have talked openly about end-of-life wishes
+          report lower grief, lower guilt, and higher satisfaction — regardless of outcome.
+          The document matters. The conversation matters more.
+        </p>
+      </div>
+
+      <div class="truth-block">
+        <p>
+          <strong>The US ranks 43rd in quality of death.</strong>
+          Not because we lack technology. Because we lack honesty.
+          Quality Death is the honest conversation the healthcare system won't have with you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT SECTION -->
+  <section class="connect-section" id="connect">
+    <div class="section-header">
+      <span class="section-eyebrow">Connected Care</span>
+      <h2>Quality Death is part of something bigger.</h2>
+      <p>Your plan connects forward — to ongoing care planning, and to caregivers who will actually honor your wishes.</p>
+    </div>
+    <div class="connect-inner">
+      <div class="connect-card">
+        <h3>CareGoals — Ongoing Advance Care Planning</h3>
+        <p>
+          Your wishes evolve. CareGoals keeps your advance care plan current —
+          through life changes, health changes, and the conversations you haven't had yet.
+          Connected to your Sage profile.
+        </p>
+        <a href="https://caregoals.com" class="btn-outline">Visit CareGoals</a>
+      </div>
+      <div class="connect-card">
+        <h3>co-op.care — Caregivers Who Know Your Wishes</h3>
+        <p>
+          When you're ready for in-home care, co-op.care connects you with worker-owned
+          caregivers trained to honor your advance care plan.
+          Your words. Your wishes. Followed.
+        </p>
+        <a href="https://co-op.care" class="btn-outline">Visit co-op.care</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Quality Death</span>
+      <ul class="footer-links">
+        <li><a href="#app">The App</a></li>
+        <li><a href="#features">How It Works</a></li>
+        <li><a href="https://caregoals.com">CareGoals</a></li>
+        <li><a href="https://co-op.care">co-op.care</a></li>
       </ul>
-    </section>
+    </div>
+    <p class="footer-note">
+      Quality Death is an advance care planning and values clarification platform.
+      It is not a substitute for legal, medical, or mental health advice.
+      For state-specific advance directive forms, visit your state health department.
+    </p>
+  </footer>
 
-    <!-- ADD TO CLAUDE -->
-    <section style="background: #fff; border: 1px solid #e8e8e4; border-radius: 12px; padding: 36px 28px; text-align: center;">
-      <h2 style="text-transform: none; font-size: 22px; font-weight: 600; color: #1a1a1a; letter-spacing: -0.02em; margin-bottom: 8px;">Start your advance care plan with AI guidance</h2>
-      <p style="color: #777; margin-bottom: 32px;">Add CareGoals to your Claude AI assistant. Have a guided conversation about your wishes, document what matters, and create legally meaningful care directives.</p>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; max-width: 560px; margin: 0 auto;">
-        <div style="background: #fafaf8; border: 1px solid #e8e8e4; border-radius: 10px; padding: 24px;">
-          <div style="font-weight: 600; font-size: 15px; margin-bottom: 6px; color: #1a1a1a;">Start your story</div>
-          <p style="font-size: 13px; color: #777; margin-bottom: 14px;">Free. A conversation, not a form. Sage AI listens and remembers.</p>
-          <a href="https://caregoals.com" style="display: inline-block; padding: 10px 20px; background: #7c9a7c; color: #fff; border-radius: 8px; font-weight: 500; font-size: 14px; text-decoration: none;">Begin with Sage</a>
-        </div>
-        <div style="background: #1a1a1a; border-radius: 10px; padding: 24px; color: #fff;">
-          <div style="font-weight: 600; font-size: 15px; margin-bottom: 6px;">Add to Claude</div>
-          <p style="font-size: 13px; color: #999; margin-bottom: 10px;">Settings &rarr; Connectors &rarr; Add Custom &rarr; URL:</p>
-          <div style="background: #2a2a2a; border-radius: 6px; padding: 10px 12px; font-family: monospace; font-size: 12px; color: #aaa; word-break: break-all; margin-bottom: 10px;">caregoals-mcp-production.up.railway.app/mcp</div>
-          <p style="font-size: 12px; color: #666;">19 tools: advance care planning, story capture, family wishes, care goal documentation.</p>
-        </div>
-      </div>
-
-      <p style="font-size: 13px; color: #999; margin-top: 20px;"><strong style="color: #555;">What is a Claude Connector?</strong> It gives your Claude AI assistant physician-supervised care planning tools. Document your wishes, capture family stories, create advance directives, or plan for the care conversations that matter most.</p>
-    </section>
-
-    <footer>
-      <p>Part of the <a href="https://co-op.care">co-op.care</a> ecosystem &middot; <a href="https://caregoals.com">CareGoals</a> &middot; <a href="https://comfortcard.org">ComfortCard</a> &middot; <a href="https://solvinghealth.com">SolvingHealth</a></p>
-      <p>This site provides general health information. It is not medical advice. Consult your physician.</p>
-    </footer>
-
+  <!-- SAGE PERSISTENT BAR qualitydeath -->
+  <div class="sage-bar" id="sage-bar">
+    <div class="sage-response-bar" id="sage-response"></div>
+    <div class="sage-bar-inner">
+      <div class="sage-dot"></div>
+      <span class="sage-label">Sage</span>
+      <input
+        type="text"
+        id="sage-input"
+        class="sage-input"
+        placeholder="Ask Sage about advance care planning..."
+        autocomplete="off"
+        aria-label="Ask Sage"
+      >
+      <button class="sage-send" id="sage-send" aria-label="Send">Ask</button>
+    </div>
   </div>
 
   <script>
-    (function() {
-      var currentStep = 0;
-      var totalSteps = 8;
-      var answers = {};
+    // Screen tab switcher
+    const tabs = document.querySelectorAll('.tab-btn');
+    const frame = document.getElementById('screen-frame');
+    const caption = document.getElementById('screen-caption');
 
-      function updateProgress() {
-        var dots = document.querySelectorAll('.progress-dot');
-        for (var i = 0; i < dots.length; i++) {
-          dots[i].classList.remove('completed', 'active');
-          if (i < currentStep) {
-            dots[i].classList.add('completed');
-          } else if (i === currentStep) {
-            dots[i].classList.add('active');
-          }
-        }
+    const captions = {
+      welcome_to_sage: 'Welcome to Sage',
+      my_care_plan: 'My Care Plan',
+      guided_conversation: 'Guided Conversation',
+      values_workshop: 'Values Workshop',
+      summary_share: 'Summary & Share',
+      educational_hub: 'Educational Hub',
+      advocate_portal: 'Advocate Portal',
+      community_stories: 'Community Stories'
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const screen = tab.dataset.screen;
+        frame.src = `/screens/${screen}.html`;
+        caption.textContent = captions[screen] || screen;
+      });
+    });
+
+    // Sage AI harness
+    const input = document.getElementById('sage-input');
+    const sendBtn = document.getElementById('sage-send');
+    const responseEl = document.getElementById('sage-response');
+    let chatHistory = [];
+
+    const keywords = ['death','dying','end of life','advance directive','hospice','palliative','family','wishes','will','dnr','proxy','values','funeral','legacy','care plan','dying well'];
+
+    function localFallback(msg) {
+      const lower = msg.toLowerCase();
+      if (keywords.some(k => lower.includes(k))) {
+        return 'That\'s an important topic. Advance care planning helps ensure your wishes are known and honored. Want me to walk you through the key questions?';
       }
+      return 'I\'m Sage — I help you think through advance care planning, end-of-life wishes, and the conversations that matter. What would you like to explore?';
+    }
 
-      function showScreen(index) {
-        var screens = document.querySelectorAll('.question-screen');
-        var target = document.getElementById('q' + index);
+    async function sendMessage() {
+      const msg = input.value.trim();
+      if (!msg) return;
 
-        // Fade out current
-        for (var i = 0; i < screens.length; i++) {
-          if (screens[i].classList.contains('visible')) {
-            screens[i].classList.remove('visible');
-            screens[i].classList.add('fade-out');
-          }
-        }
+      sendBtn.disabled = true;
+      input.value = '';
+      responseEl.textContent = 'Sage is thinking...';
+      responseEl.classList.add('visible');
 
-        setTimeout(function() {
-          for (var i = 0; i < screens.length; i++) {
-            screens[i].classList.remove('fade-out');
-            screens[i].style.display = 'none';
-          }
-          if (target) {
-            target.style.display = 'block';
-            // Force reflow before adding visible class for transition
-            void target.offsetHeight;
-            target.classList.add('visible');
-          }
-        }, 300);
+      try {
+        const res = await fetch('/api/sage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: msg, site: 'qualitydeath', history: chatHistory }),
+          signal: AbortSignal.timeout(10000)
+        });
 
-        currentStep = index;
-        updateProgress();
-
-        // Scroll to conversation tool
-        setTimeout(function() {
-          var section = document.getElementById('conversation-section');
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 350);
-      }
-
-      // Single-select option
-      window.selectOption = function(btn, groupId) {
-        var group = document.getElementById(groupId);
-        var buttons = group.querySelectorAll('.option-btn');
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('selected');
-        }
-        btn.classList.add('selected');
-      };
-
-      // Multi-select option
-      window.toggleMulti = function(btn, groupId) {
-        var group = document.getElementById(groupId);
-        var isNone = btn.textContent === 'None of these';
-
-        if (isNone) {
-          // Deselect everything else, toggle this
-          var buttons = group.querySelectorAll('.option-btn');
-          for (var i = 0; i < buttons.length; i++) {
-            if (buttons[i] !== btn) buttons[i].classList.remove('selected');
-          }
-          btn.classList.toggle('selected');
+        if (res.ok) {
+          const data = await res.json();
+          const reply = data.response || localFallback(msg);
+          responseEl.textContent = reply;
+          chatHistory.push({ role: 'user', content: msg });
+          chatHistory.push({ role: 'assistant', content: reply });
+          if (chatHistory.length > 12) chatHistory = chatHistory.slice(-12);
         } else {
-          // Deselect "None of these" if selecting something else
-          var noneBtn = null;
-          var buttons = group.querySelectorAll('.option-btn');
-          for (var i = 0; i < buttons.length; i++) {
-            if (buttons[i].textContent === 'None of these') {
-              noneBtn = buttons[i];
-              break;
-            }
-          }
-          if (noneBtn) noneBtn.classList.remove('selected');
-          btn.classList.toggle('selected');
+          responseEl.textContent = localFallback(msg);
         }
-      };
-
-      function getSelectedOption(groupId) {
-        var group = document.getElementById(groupId);
-        var selected = group.querySelector('.option-btn.selected');
-        return selected ? selected.textContent : 'Not answered';
+      } catch (e) {
+        responseEl.textContent = localFallback(msg);
+      } finally {
+        sendBtn.disabled = false;
+        input.focus();
       }
+    }
 
-      function getMultiSelected(groupId) {
-        var group = document.getElementById(groupId);
-        var selected = group.querySelectorAll('.option-btn.selected');
-        if (selected.length === 0) return 'Not answered';
-        var values = [];
-        for (var i = 0; i < selected.length; i++) {
-          values.push(selected[i].textContent);
-        }
-        return values.join('; ');
-      }
-
-      window.nextQuestion = function(from) {
-        showScreen(from + 1);
-      };
-
-      window.prevQuestion = function(from) {
-        showScreen(from - 1);
-      };
-
-      window.showResults = function() {
-        // Gather all answers
-        var values = document.getElementById('answer-values').value.trim() || 'Not answered';
-        var proxyName = document.getElementById('answer-proxy-name').value.trim() || 'Not specified';
-        var proxyRel = document.getElementById('answer-proxy-relationship').value || '';
-        var cpr = getSelectedOption('answer-cpr');
-        var ventilator = getSelectedOption('answer-ventilator');
-        var feeding = getSelectedOption('answer-feeding');
-        var location = getSelectedOption('answer-location');
-        var boundaries = getMultiSelected('answer-boundaries');
-        var finalWishes = document.getElementById('answer-final').value.trim();
-
-        // Populate results
-        document.getElementById('resultsDate').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        document.getElementById('resultsProxyName').textContent = proxyName;
-        document.getElementById('resultsProxyRelationship').textContent = proxyRel;
-        document.getElementById('resultsValues').textContent = values;
-        document.getElementById('resultsCpr').textContent = cpr;
-        document.getElementById('resultsVentilator').textContent = ventilator;
-        document.getElementById('resultsFeeding').textContent = feeding;
-        document.getElementById('resultsLocation').textContent = location;
-        document.getElementById('resultsBoundaries').textContent = boundaries;
-
-        if (finalWishes) {
-          document.getElementById('resultsFinal').textContent = finalWishes;
-          document.getElementById('resultsFinalSection').style.display = 'block';
-        } else {
-          document.getElementById('resultsFinalSection').style.display = 'none';
-        }
-
-        // Conversation prompt
-        var promptEl = document.getElementById('resultsConversationPrompt');
-        var displayName = proxyName !== 'Not specified' ? proxyName : 'your healthcare proxy';
-        promptEl.innerHTML = '<strong>The most important thing you can do right now</strong> is share this with ' + displayName + '. Show them this summary. Talk about it over coffee. It takes 30 minutes and it will be the most important conversation you\'ve ever had.';
-
-        // Hide all question screens
-        var screens = document.querySelectorAll('.question-screen');
-        for (var i = 0; i < screens.length; i++) {
-          screens[i].classList.remove('visible', 'fade-out');
-          screens[i].style.display = 'none';
-        }
-
-        // Mark all progress dots completed
-        var dots = document.querySelectorAll('.progress-dot');
-        for (var i = 0; i < dots.length; i++) {
-          dots[i].classList.add('completed');
-          dots[i].classList.remove('active');
-        }
-
-        // Show results
-        var resultsScreen = document.getElementById('resultsScreen');
-        resultsScreen.style.display = 'block';
-        void resultsScreen.offsetHeight;
-        resultsScreen.classList.add('visible');
-
-        var section = document.getElementById('conversation-section');
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      };
-
-      window.startOver = function() {
-        // Reset form
-        document.getElementById('answer-values').value = '';
-        document.getElementById('answer-proxy-name').value = '';
-        document.getElementById('answer-proxy-relationship').selectedIndex = 0;
-        document.getElementById('answer-final').value = '';
-
-        // Reset all option buttons
-        var allOptions = document.querySelectorAll('.option-btn');
-        for (var i = 0; i < allOptions.length; i++) {
-          allOptions[i].classList.remove('selected');
-        }
-
-        // Hide results
-        var resultsScreen = document.getElementById('resultsScreen');
-        resultsScreen.classList.remove('visible');
-        resultsScreen.style.display = 'none';
-
-        // Show first question
-        currentStep = 0;
-        var q0 = document.getElementById('q0');
-        q0.style.display = 'block';
-        void q0.offsetHeight;
-        q0.classList.add('visible');
-        updateProgress();
-
-        var section = document.getElementById('conversation-section');
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      };
-
-      // Initialize
-      updateProgress();
-    })();
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+    });
   </script>
-<script src="https://solvinghealth.com/chat-widget.js" data-channel="qualitydeath" data-color="#7c9a7c"></script>
-<script src="https://solvinghealth.com/voice-embed.js" data-site="qualitydeath" defer></script>
+
 </body>
 </html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sage | Editorial Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#022100",
+                    "secondary-container": "#e4e2e1",
+                    "primary": "#436438",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#aad19b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed": "#191c1b",
+                    "on-surface-variant": "#43483f",
+                    "tertiary-fixed": "#e1e3e0",
+                    "on-primary-container": "#f8ffef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "primary-container": "#5b7e4e",
+                    "tertiary-fixed-dim": "#c5c7c4",
+                    "surface-container": "#f0eded",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed-variant": "#444746",
+                    "outline-variant": "#c3c8bc",
+                    "on-secondary-container": "#656464",
+                    "surface-bright": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "outline": "#73796e",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed": "#c6eeb5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#595d5b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#45673a",
+                    "background": "#fcf9f8",
+                    "inverse-primary": "#aad19b",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#2e4f24",
+                    "on-secondary-fixed-variant": "#474747",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#727573",
+                    "secondary": "#5f5e5e",
+                    "on-tertiary-container": "#fbfdfa",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover" data-alt="portrait of a mature person with a calm and kind expression in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPbluBs9i-_wC5c7LovCKam28nUIuMY90j3_qwpQcy3p1j1ylFpjnosFVeDA6h6IUidV11zF3gGnZ43Twn9YrxQ-N84RUI9DE_t_17_ldYh4TUJ89JzGyVLnB9A1COPqY_6DvqzBe13eb2xVn48zgn_QnBD1rclXmCL2J7MulZj4u-Aci6nxSM12oLMx78tIwnkHrktTqnTp8-Gas6Rim2k_TaQIMj4TNYChmbG_C4NifieIy9zIbNqeSWdFHyscLVLwNxLYQL1-47"/>
+<span class="text-2xl font-semibold tracking-tighter text-[#436438] dark:text-[#6B8F5E]">Sage</span>
+</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex gap-6 font-inter tracking-tight leading-tight">
+<a class="text-[#436438] dark:text-[#6B8F5E] font-medium hover:opacity-70 transition-opacity duration-300" href="#">Editorial Hub</a>
+<a class="text-stone-500 dark:text-stone-400 hover:opacity-70 transition-opacity duration-300" href="#">Advocate Portal</a>
+<a class="text-stone-500 dark:text-stone-400 hover:opacity-70 transition-opacity duration-300" href="#">Values Workshop</a>
+</nav>
+<span class="material-symbols-outlined text-[#436438] cursor-pointer" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-32 max-w-7xl mx-auto px-8">
+<!-- Hero Section: The Conversation -->
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="uppercase tracking-widest text-xs font-semibold text-primary mb-6 block">Featured Perspective</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-8 text-on-surface">The Last Great Conversation.</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl font-light">
+                        Exploring the delicate art of discussing end-of-life care with grace, transparency, and deep empathy.
+                    </p>
+</div>
+<div class="lg:col-span-5">
+<div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden relative group">
+<img alt="Reflective interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a sun-drenched quiet room with a single chair and a vase of dried flowers, soft morning light casting long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxBmg6OIVkAJxXEZNfz0kJCXnIWqCVIlOSqg-25CHt89fGBSakM6MUaazILyw1UlEzN_OOJSJpfwl1c7AErOmlJYpjoU6qGYP2GmoSB_Q1_whTI04ncDlcaEkCwb3aaq7_Z0HU_W9_xj-ABHLDnaOBy9MfGygzDlKOb0JJVE25rufnBLdZ_L6AfbsMC4RC8P6Bve0elOS1FsA8dx9j5N8aWzQOoMPUd2r7Nu6hXQRSDB9eOAj995_VZQBenvEl7TYkeYmHZ0y28b1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-white">
+<span class="text-xs uppercase tracking-widest opacity-80">12 min read</span>
+<h3 class="text-2xl font-semibold mt-2">Finding words for the unspoken</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Quality of Life Pillars -->
+<section class="mb-24">
+<div class="flex justify-between items-baseline mb-12">
+<h2 class="text-3xl font-bold tracking-tight">Dimensions of Care</h2>
+<a class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                    View Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pillar 1 -->
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-xl flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="font-mono text-sm opacity-50">Volume 01 — QoL</span>
+</div>
+<h3 class="text-4xl font-bold leading-tight mb-4">Redefining Comfort: Beyond the Clinical</h3>
+<p class="text-lg text-on-surface-variant max-w-md">Quality of life isn't just about the absence of pain; it's about the presence of meaning, connection, and small daily joys.</p>
+</div>
+<button class="mt-8 self-start px-6 py-3 bg-primary text-on-primary rounded-md text-sm font-medium hover:opacity-90 transition-opacity">
+                        Read Depth Study
+                    </button>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container p-10 rounded-xl flex flex-col">
+<img alt="Nature scenery" class="w-full h-48 object-cover rounded-lg mb-8" data-alt="calm lake surface at dawn with misty mountains in the background, cool blue and grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRMRBNlWYy04U65W38maCzJXqb54qN2C_rJdU1XB-_dIBzzrl06Xr0nsvcF_2ztj0Pfdst1Er96NTlMmNbZCHssBv-erq4X7qn47LYwSBQl1ENvINwev8FWogqQoP-m3eGT7psE7bZYxbZHycKTesZZhd_9DrC6GSV6DBS3VxBbY6Pc1WTSSU4R695g9xaS1EcissBWt6vZN8zyygVK_4Nub5em_Mv-ZNl5E_slsUcfGzjKOxwZ8ECKrjMCs_loEE_Ql-WWpPB4O8a"/>
+<h3 class="text-2xl font-bold mb-4">Care Ecosystems</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Navigating the spectrum from hospice at home to specialized palliative centers.</p>
+<a class="mt-auto text-primary text-sm font-semibold inline-flex items-center gap-1" href="#">
+                        Explore Options <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-primary text-on-primary p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-3xl font-bold mb-6 italic">"The legacy we leave is in how we choose to say goodbye."</h3>
+<p class="opacity-80 text-sm">— Dr. Elena Sterling, Sage Fellow</p>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Pillar 4 -->
+<div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-high p-10 rounded-xl">
+<h4 class="text-xs uppercase tracking-[0.2em] font-bold text-primary mb-4">Workshop</h4>
+<h3 class="text-2xl font-bold mb-4">Values Alignment Mapping</h3>
+<p class="text-sm text-on-surface-variant mb-6">A structured exercise to identify what matters most when time becomes the primary currency.</p>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="Psychology">psychology</span>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl">
+<h4 class="text-xs uppercase tracking-[0.2em] font-bold text-primary mb-4">Community</h4>
+<h3 class="text-2xl font-bold mb-4">Voices of Advocacy</h3>
+<p class="text-sm text-on-surface-variant mb-6">Stories from families who transformed their care experience through active advocacy.</p>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-stone-200 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="portrait of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyXo6U9gpYNrCx35Z7_V95NcoqpmpHu2_6tmYkRSC0imCOvbIq_v4zX_yitnib6QZxi8PkJLaHIyxjAHY45vmWvp6zcQpqwR-HAVmS-WKUBa-Ou00fgXaPnbHNnP8r8DUKNPfkvrRrdn7TkOL6eK7M3YwLIrkd8ps0eibHO5s_YMrW-YtO5b41zVsWEikcW1V3wlEGN_zBKg2WwSpiFIaPGQ3Ujg4wHFXZGf_9olPPeW1HZVXdGarfF3NpVdFgC5qvQee0D5Al1d0c"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-stone-200 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="portrait of a man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDPZtpDyAsHQJJ6FnzP00h4ku5OGXHhDgyIpso9_bG0cXaifZEdcHS34tcKXX20XFA4dPp9_StIlU_ZGD2HqyCPSXAH2NfPyp--otvb8L6yXl89hWlZ8wWlqan8ZV7NwuPxuTtG8eGjSjdx4wlsxoKOd9ZYDtBWlWPrnO7q23N1LAa79FJCis5m3S27ibpO9eH5VmbacXSqscSwA2ayu9Bj8Uj_aajXr4lxNks6quK7wqcOBDLe-l56fynKj4RLX_AkfKICxJ0k2jI"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-stone-200 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="portrait of a young person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpG6jXURrDNgMaVA6TJL9aMWCkc3jz8_NTBoCAWDJEnW_E80AxV8KwCYMKhMlTK5ZfRKBk1A3cazM556wD8DmuLnBcNhpJkq81DIJQhe8g79awAq3nUkLIy2C70UNDn40HSiFUfdc-ypQ_QLWgtu23jvUUjV4xlC-gO-8zzUHE-j-wLtdvpQTgXp24VN6zCa9DKqYvBxzuYVZqj6NSWSVBAnesmxmhGjoOyoZoud4tjvf4K0XqXBiU4M9sdsEbzqJ_7zG-nO_69Lo1"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary">+12</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The "Reflection" Section -->
+<section class="mb-24 py-20 px-12 bg-surface-container-lowest rounded-3xl text-center relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h2 class="text-4xl font-bold mb-6">The Advocate's Pledge</h2>
+<p class="text-xl text-on-surface-variant font-light mb-10">We believe that every final chapter deserves to be written with dignity, autonomy, and an abundance of care.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-md font-medium">Join the Movement</button>
+<button class="px-8 py-4 border border-outline-variant text-on-surface rounded-md font-medium hover:bg-surface-container-low transition-colors">Our Philosophy</button>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+</section>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-3xl border-t-[0.5px] border-stone-200/15 md:hidden">
+<!-- Discover (Active for Hub) -->
+<a class="flex flex-col items-center justify-center text-[#436438] dark:text-[#6B8F5E] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Discover</span>
+</a>
+<!-- Advocate -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="favorite">favorite</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Advocate</span>
+</a>
+<!-- Workshop -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="grid_view">grid_view</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Workshop</span>
+</a>
+<!-- Stories -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="menu_book">menu_book</span>
+<span class="text-[11px] font-medium tracking-[0.05em] uppercase mt-1">Stories</span>
+</a>
+</nav>
+<!-- Floating Action Button - Only for Core Hub screen -->
+<button class="fixed right-8 bottom-28 md:bottom-12 w-16 h-16 bg-primary text-on-primary rounded-full shadow-[20px_40px_40px_rgba(0,0,0,0.15)] flex items-center justify-center z-40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</button>
+</body></html>

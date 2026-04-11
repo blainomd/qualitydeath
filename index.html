@@ -895,22 +895,53 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-brand">Quality Death</span>
-      <ul class="footer-links">
-        <li><a href="#app">The App</a></li>
-        <li><a href="#features">How It Works</a></li>
-        <li><a href="https://caregoals.com">CareGoals</a></li>
-        <li><a href="https://co-op.care">co-op.care</a></li>
-      </ul>
+  <footer style="background:#0d1a14;padding:48px 32px 0;font-family:Inter,sans-serif">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="background:rgba(13,115,119,0.08);border:1px solid rgba(13,115,119,0.18);border-radius:10px;padding:14px 18px;margin-bottom:36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <span style="font-size:13px;color:rgba(255,255,255,0.45)"><strong style="color:#6bd8cb">One login. Every product.</strong> Sign in once to access the full SolvingHealth network.</span>
+      <a href="https://solvinghealth.com/signin" style="background:transparent;border:1px solid rgba(13,115,119,0.4);color:#6bd8cb;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none">Sign In / Register</a>
     </div>
-    <p class="footer-note">
-      Quality Death is an advance care planning and values clarification platform.
-      It is not a substitute for legal, medical, or mental health advice.
-      For state-specific advance directive forms, visit your state health department.
-    </p>
-  </footer>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="width:34px;height:34px;background:linear-gradient(135deg,#0d7377,#1353d8);border-radius:9px"></div>
+          <span style="font-size:17px;font-weight:800;color:white">Solving<span style="color:#6bd8cb">Health</span></span>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.7;max-width:280px">The health system that works for you — instead of you working for it. AI-native care infrastructure. Boulder, CO.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">SolvingHealth Network</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+          <li><a href="https://solvinghealth.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">SolvingHealth</a></li>
+          <li><a href="https://surgeonvalue.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">SurgeonValue</a></li>
+          <li><a href="https://co-op.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">co-op.care</a></li>
+          <li><a href="https://clinicalswipe.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">ClinicalSwipe</a></li>
+          <li><a href="https://comfortcard.org" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">ComfortCard</a></li>
+          <li><a href="https://caregoals.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">CareGoals</a></li>
+          <li><a href="https://altru.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">altru.care</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">Resources</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+          <li><a href="https://solvinghealth.com/docs" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">Documentation</a></li>
+          <li><a href="https://solvinghealth.com/mcp" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">MCP Connector</a></li>
+          <li><a href="https://solvinghealth.com/security" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">HIPAA &amp; Security</a></li>
+          <li><a href="https://solvinghealth.com/contact" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.07)">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:18px 0 24px">
+      <span style="font-size:12px;color:rgba(255,255,255,0.28)">© 2026 SolvingHealth LLC · Boulder, CO · HIPAA Compliant</span>
+      <div style="display:flex;gap:16px">
+        <a href="/privacy" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Privacy</a>
+        <a href="/terms" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Terms</a>
+        <a href="/hipaa" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">HIPAA BAA</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
   <!-- SAGE PERSISTENT BAR qualitydeath -->
   <div class="sage-bar" id="sage-bar">
@@ -1014,6 +1045,29 @@
       if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
     });
   </script>
+
+<!-- co-op.care ecosystem footer -->
+<footer style="background:#1B2A4A;padding:48px 24px 32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<div style="max-width:800px;margin:0 auto;">
+<div style="text-align:center;margin-bottom:24px;">
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:16px;">
+<a href="https://co-op.care" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">co-op.care</a>
+<a href="https://surgeonvalue.com" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">SurgeonValue</a>
+<a href="https://caregoals.com" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">CareGoals</a>
+<a href="https://comfortcard.org" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">ComfortCard</a>
+<a href="https://clinicalswipe.com" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">ClinicalSwipe</a>
+<a href="https://solvinghealth.com" style="font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;">SolvingHealth</a>
+</div>
+<p style="font-size:14px;color:rgba(255,255,255,0.5);font-style:italic;margin:0 0 20px;">The health system that works for you — instead of you working for it.</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px;">
+<a href="https://comfortcard.org" style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:8px 20px;border-radius:100px;text-decoration:none;">Get a ComfortCard</a>
+<a href="https://co-op.care" style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:8px 20px;border-radius:100px;text-decoration:none;">Start a co-op near you</a>
+<a href="https://solvinghealth.com/afhm" style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:8px 20px;border-radius:100px;text-decoration:none;">For Health Systems</a>
+</div>
+</div>
+<p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.15);margin:0;">Physician-governed AI. HIPAA compliant. SolvingHealth LLC.</p>
+</div>
+</footer>
 
 </body>
 </html>

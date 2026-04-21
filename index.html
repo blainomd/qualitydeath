@@ -682,6 +682,7 @@
       .footer-links { justify-content: center; }
     }
   </style>
+  <script src="https://harnesshealth.ai/footer.js" defer></script>
 </head>
 <body>
 
@@ -700,7 +701,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-eyebrow">Advance Care Planning, Powered by Sage AI</span>
+      <span class="hero-eyebrow">Advance Care Planning, Powered by Reed AI</span>
       <h1>You deserve a <em>good death.</em></h1>
       <p class="hero-sub">
         Quality Death helps you define what that means — for yourself, on your own terms —
@@ -708,7 +709,7 @@
       </p>
       <div class="hero-actions">
         <a href="#sage-input" class="btn-primary">Start the conversation</a>
-        <span class="hero-disclaimer">Advance care planning &nbsp;·&nbsp; Values clarification &nbsp;·&nbsp; Powered by Sage AI</span>
+        <span class="hero-disclaimer">Advance care planning &nbsp;·&nbsp; Values clarification &nbsp;·&nbsp; Powered by Reed AI</span>
       </div>
     </div>
   </section>
@@ -742,11 +743,11 @@
     <div class="section-header">
       <span class="section-eyebrow">The App</span>
       <h2>Every conversation, beautifully guided.</h2>
-      <p>Sage walks you through values, fears, and preferences — at whatever pace feels right.</p>
+      <p>Reed walks you through values, fears, and preferences — at whatever pace feels right.</p>
     </div>
 
     <div class="screen-tabs" role="tablist" aria-label="App screens">
-      <button class="tab-btn active" data-screen="welcome_to_sage" role="tab">Welcome to Sage</button>
+      <button class="tab-btn active" data-screen="welcome_to_sage" role="tab">Welcome to Reed</button>
       <button class="tab-btn" data-screen="my_care_plan" role="tab">My Care Plan</button>
       <button class="tab-btn" data-screen="guided_conversation" role="tab">Guided Conversation</button>
       <button class="tab-btn" data-screen="values_workshop" role="tab">Values Workshop</button>
@@ -768,7 +769,7 @@
             sandbox="allow-same-origin allow-scripts"
           ></iframe>
         </div>
-        <p class="screen-caption" id="screen-caption">Welcome to Sage</p>
+        <p class="screen-caption" id="screen-caption">Welcome to Reed</p>
       </div>
     </div>
   </section>
@@ -777,7 +778,7 @@
   <section class="features-section" id="features">
     <div class="section-header" style="max-width:960px; margin: 0 auto 0;">
       <span class="section-eyebrow">How It Works</span>
-      <h2>Four things Sage does that no one else does.</h2>
+      <h2>Four things Reed does that no one else does.</h2>
     </div>
     <div class="features-grid">
 
@@ -788,7 +789,7 @@
           </svg>
         </div>
         <h3>Guided Values Conversation</h3>
-        <p>Sage asks the questions your family can't. What matters most to you? What are you afraid of? What does "quality of life" mean — to <em>you</em>, specifically, right now?</p>
+        <p>Reed asks the questions your family can't. What matters most to you? What are you afraid of? What does "quality of life" mean — to <em>you</em>, specifically, right now?</p>
       </div>
 
       <div class="feature-card">
@@ -878,7 +879,7 @@
         <p>
           Your wishes evolve. CareGoals keeps your advance care plan current —
           through life changes, health changes, and the conversations you haven't had yet.
-          Connected to your Sage profile.
+          Connected to your Reed profile.
         </p>
         <a href="https://caregoals.com" class="btn-outline">Visit CareGoals</a>
       </div>
@@ -948,14 +949,14 @@
     <div class="sage-response-bar" id="sage-response"></div>
     <div class="sage-bar-inner">
       <div class="sage-dot"></div>
-      <span class="sage-label">Sage</span>
+      <span class="sage-label">Reed</span>
       <input
         type="text"
         id="sage-input"
         class="sage-input"
-        placeholder="Ask Sage about advance care planning..."
+        placeholder="Ask Reed about advance care planning..."
         autocomplete="off"
-        aria-label="Ask Sage"
+        aria-label="Ask Reed"
       >
       <button class="sage-send" id="sage-send" aria-label="Send">Ask</button>
     </div>
@@ -968,7 +969,7 @@
     const caption = document.getElementById('screen-caption');
 
     const captions = {
-      welcome_to_sage: 'Welcome to Sage',
+      welcome_to_sage: 'Welcome to Reed',
       my_care_plan: 'My Care Plan',
       guided_conversation: 'Guided Conversation',
       values_workshop: 'Values Workshop',
@@ -989,7 +990,7 @@
       });
     });
 
-    // Sage AI harness
+    // Reed AI harness
     const input = document.getElementById('sage-input');
     const sendBtn = document.getElementById('sage-send');
     const responseEl = document.getElementById('sage-response');
@@ -1002,7 +1003,7 @@
       if (keywords.some(k => lower.includes(k))) {
         return 'That\'s an important topic. Advance care planning helps ensure your wishes are known and honored. Want me to walk you through the key questions?';
       }
-      return 'I\'m Sage — I help you think through advance care planning, end-of-life wishes, and the conversations that matter. What would you like to explore?';
+      return 'I\'m Reed — I help you think through advance care planning, end-of-life wishes, and the conversations that matter. What would you like to explore?';
     }
 
     async function sendMessage() {
@@ -1011,7 +1012,7 @@
 
       sendBtn.disabled = true;
       input.value = '';
-      responseEl.textContent = 'Sage is thinking...';
+      responseEl.textContent = 'Reed is thinking...';
       responseEl.classList.add('visible');
 
       try {

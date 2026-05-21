@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quality Death — A good death is not a failure. It's a plan.</title>
-<meta name="description" content="End-of-life planning for families who want to be ready. Document your values. Find the right care team. Give those who love you permission to honor your wishes.">
+<meta name="description" content="Most people don't get the death they wanted — not because it was impossible, but because nobody planned it. Quality Death guides families through values, advance directives, and the conversations that make a good death possible.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -49,6 +51,17 @@ nav{position:sticky;top:0;z-index:100;height:56px;padding:0 28px;display:flex;al
 .hero-btn:hover{background:#0b8a8f}
 .hero-note{font-size:12px;color:rgba(255,255,255,.38);margin-top:14px;letter-spacing:.01em}
 
+/* STATS */
+.stats-wrap{background:#fff;border-bottom:1px solid var(--border);padding:60px 28px}
+.stats-inner{max-width:960px;margin:0 auto}
+.stats-lead{text-align:center;max-width:600px;margin:0 auto 44px}
+.stats-lead h2{font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.3;margin-bottom:14px}
+.stats-lead p{font-size:15px;color:var(--text-mid)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.stat-card{background:#fff;padding:36px 28px;text-align:center}
+.stat-number{font-size:2.75rem;font-weight:800;color:var(--teal);letter-spacing:-.04em;line-height:1;margin-bottom:10px}
+.stat-label{font-size:14px;font-weight:500;color:var(--text-mid);line-height:1.4}
+
 /* SECTION */
 .section{padding:72px 28px;max-width:960px;margin:0 auto}
 .section-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
@@ -62,22 +75,30 @@ nav{position:sticky;top:0;z-index:100;height:56px;padding:0 28px;display:flex;al
 .thing-card h3{font-size:1rem;font-weight:700;color:var(--text-dark);line-height:1.3}
 .thing-card p{font-size:13px;color:var(--text-mid);line-height:1.65}
 
+/* HARD TRUTHS */
+.truths-wrap{background:var(--navy-dark);padding:72px 28px}
+.truths-inner{max-width:720px;margin:0 auto;text-align:center}
+.truths-inner .section-label{color:var(--teal-light)}
+.truths-inner h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.25;margin-bottom:32px}
+.truths-inner h2 em{font-style:normal;color:var(--teal-light)}
+.truth-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 32px;margin-bottom:16px;text-align:left}
+.truth-block p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.7}
+.truth-block strong{color:var(--teal-light);font-weight:600}
+
 /* VALUES SECTION */
-.values-wrap{background:var(--navy-dark);padding:72px 28px;color:#fff}
+.values-wrap{background:var(--warm-card);padding:72px 28px;border-top:1px solid var(--border)}
 .values-inner{max-width:760px;margin:0 auto;text-align:center}
-.values-inner .section-label{color:var(--teal-light)}
-.values-inner h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:14px}
-.values-inner p{font-size:.97rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:540px;margin:0 auto 32px}
+.values-inner p{font-size:.97rem;color:var(--text-mid);line-height:1.75;max-width:540px;margin:0 auto 32px}
 .values-questions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:36px;text-align:left}
-.vq{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:18px 20px;font-size:14px;color:rgba(255,255,255,.78);line-height:1.6;font-style:italic}
+.vq{background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:18px 20px;font-size:14px;color:var(--text-mid);line-height:1.6;font-style:italic}
 .values-cta{display:inline-block;background:var(--teal);color:#fff;font-size:14px;font-weight:600;padding:12px 28px;border-radius:7px;transition:background .15s}
 .values-cta:hover{background:#0b8a8f}
-.values-note{font-size:12px;color:rgba(255,255,255,.35);margin-top:12px}
+.values-note{font-size:12px;color:var(--text-muted);margin-top:12px}
 
 /* CARE SUPPORT */
-.care-section{padding:72px 28px;background:#fff;border-top:1px solid var(--border)}
+.care-section{padding:72px 28px;background:var(--warm);border-top:1px solid var(--border)}
 .care-inner{max-width:760px;margin:0 auto}
-.care-card{background:var(--warm);border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;align-items:flex-start;gap:24px}
+.care-card{background:var(--warm-card);border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;align-items:flex-start;gap:24px}
 .care-card-icon{width:44px;height:44px;border-radius:10px;background:rgba(13,115,119,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .care-card-icon svg{width:22px;height:22px}
 .care-card h3{font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px}
@@ -111,6 +132,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   .nav-links{display:none}
   .hero{padding:64px 20px 56px}
   .section{padding:52px 20px}
+  .stats-grid{grid-template-columns:1fr}
   .care-card{flex-direction:column}
   .footer-inner{flex-direction:column;text-align:center}
 }
@@ -122,9 +144,9 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <nav>
   <span class="nav-logo">Quality Death</span>
   <div class="nav-links">
+    <a href="#why">Why it matters</a>
     <a href="#three-things">Where to start</a>
     <a href="#values">Your values</a>
-    <a href="#care">Care support</a>
     <a href="#resources">Resources</a>
   </div>
   <a href="https://caregoals.com" class="nav-cta">Start the conversation</a>
@@ -135,8 +157,8 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   <div class="hero-inner">
     <h1>A good death is not a failure.<br>It&rsquo;s a <em>plan.</em></h1>
     <p class="hero-sub">
-      Most families aren't unprepared because the situation was impossible.
-      They're unprepared because the conversation never happened.
+      Most families aren&rsquo;t unprepared because the situation was impossible.
+      They&rsquo;re unprepared because the conversation never happened.
       This is where it starts.
     </p>
     <a href="https://caregoals.com" class="hero-btn">Start the conversation</a>
@@ -144,18 +166,84 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   </div>
 </section>
 
+<!-- STATS -->
+<div class="stats-wrap">
+  <div class="stats-inner">
+    <div class="stats-lead">
+      <h2>75% of Americans say they want to die at home. Only 30% do.</h2>
+      <p>The gap isn&rsquo;t medical. It&rsquo;s a conversation that never happened.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">75%</div>
+        <div class="stat-label">want to die at home, on their own terms</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">30%</div>
+        <div class="stat-label">actually do &mdash; a gap driven by silence, not medicine</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">43rd</div>
+        <div class="stat-label">the US ranking in quality of death &mdash; not for lack of technology</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HARD TRUTHS -->
+<div class="truths-wrap" id="why">
+  <div class="truths-inner">
+    <div class="section-label">Why this matters</div>
+    <h2>The honest case for <em>having this conversation now.</em></h2>
+
+    <div class="truth-block">
+      <p>
+        <strong>The ICU is 40x more expensive per day than home care.</strong>
+        It&rsquo;s also where most people don&rsquo;t want to be.
+        And it&rsquo;s where most people who didn&rsquo;t plan end up anyway.
+      </p>
+    </div>
+
+    <div class="truth-block">
+      <p>
+        <strong>Completing an advance directive is free.</strong>
+        It takes about 30 minutes. It works in all 50 states.
+        It is the most important thing you can do for the people you love.
+        The hardest part is starting.
+      </p>
+    </div>
+
+    <div class="truth-block">
+      <p>
+        <strong>The conversation itself is the intervention.</strong>
+        Families who have talked openly about end-of-life wishes report lower grief, lower guilt,
+        and higher satisfaction &mdash; regardless of outcome.
+        The document matters. The conversation matters more.
+      </p>
+    </div>
+
+    <div class="truth-block">
+      <p>
+        <strong>The US ranks 43rd in quality of death.</strong>
+        Not because we lack technology. Because we lack honesty.
+        Quality Death is the honest conversation the healthcare system won&rsquo;t have with you.
+      </p>
+    </div>
+  </div>
+</div>
+
 <!-- THREE THINGS -->
 <section class="section" id="three-things">
   <div class="section-label">Where to start</div>
   <h2>Three things families can do.</h2>
-  <p class="section-sub">You don't have to do all of this at once. Start with whatever feels most urgent.</p>
+  <p class="section-sub">You don&rsquo;t have to do all of this at once. Start with whatever feels most urgent.</p>
   <div class="things-grid">
     <div class="thing-card">
       <span class="thing-num">One</span>
       <h3>Document your preferences now</h3>
       <p>
-        An advance directive tells your medical team what you want — and what you don't want —
-        when you can't speak for yourself. It takes about 20 minutes to complete.
+        An advance directive tells your medical team what you want &mdash; and what you don&rsquo;t want &mdash;
+        when you can&rsquo;t speak for yourself. It takes about 20 minutes to complete.
         It works in all 50 states. The hardest part is starting.
       </p>
     </div>
@@ -165,16 +253,16 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
       <p>
         The right care team knows your wishes before a crisis forces the question.
         co-op.care connects families with worker-owned caregivers trained
-        to support people at home — on their terms, in the time they have left.
+        to support people at home &mdash; on their terms, in the time they have left.
       </p>
     </div>
     <div class="thing-card">
       <span class="thing-num">Three</span>
-      <h3>Give caregivers permission to honor your wishes</h3>
+      <h3>Give your family permission to honor your wishes</h3>
       <p>
-        The people who love you shouldn't have to guess. A care plan shared with your
+        The people who love you shouldn&rsquo;t have to guess. A care plan shared with your
         family, your proxy, and your care team means that when the moment comes,
-        the people in the room know exactly what to do.
+        everyone in the room knows exactly what to do.
       </p>
     </div>
   </div>
@@ -184,16 +272,16 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <div class="values-wrap" id="values">
   <div class="values-inner">
     <div class="section-label">Your values</div>
-    <h2>What matters to you?</h2>
+    <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px">What matters to you?</h2>
     <p>
-      An advance directive isn't a legal document. It's a values document.
+      An advance directive isn&rsquo;t just a legal document. It&rsquo;s a values document.
       Before you fill out a form, it helps to sit with a few honest questions.
     </p>
     <div class="values-questions">
-      <div class="vq">"If I could only have one thing at the end of my life, it would be&nbsp;&hellip;"</div>
-      <div class="vq">"The thing I'm most afraid of is not the dying. It's&nbsp;&hellip;"</div>
-      <div class="vq">"Quality of life, to me, means I can still&nbsp;&hellip;"</div>
-      <div class="vq">"I want the people I love to know that I&nbsp;&hellip;"</div>
+      <div class="vq">&ldquo;If I could only have one thing at the end of my life, it would be&nbsp;&hellip;&rdquo;</div>
+      <div class="vq">&ldquo;The thing I&rsquo;m most afraid of is not the dying. It&rsquo;s&nbsp;&hellip;&rdquo;</div>
+      <div class="vq">&ldquo;Quality of life, to me, means I can still&nbsp;&hellip;&rdquo;</div>
+      <div class="vq">&ldquo;I want the people I love to know that I&nbsp;&hellip;&rdquo;</div>
     </div>
     <a href="https://caregoals.com" class="values-cta">Explore your values at CareGoals</a>
     <p class="values-note">CareGoals guides you through these questions and turns your answers into a shareable care plan.</p>

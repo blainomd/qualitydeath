@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quality Death — A good death is not a failure. It's a plan.</title>
-<meta name="description" content="Most people don't get the death they wanted — not because it was impossible, but because nobody planned it. Quality Death guides families through values, advance directives, and the conversations that make a good death possible.">
+<meta name="description" content="Most people have very clear opinions about how they want to die. Almost none of them have written it down. Quality Death guides families through advance directives and the conversations that make a good death possible.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -18,6 +18,7 @@
   --navy-dark:#111e35;
   --navy-card:#1e3055;
   --teal:#0D7377;
+  --teal-bright:#14a8ae;
   --teal-light:#4edea3;
   --warm:#f6f3f0;
   --warm-card:#ffffff;
@@ -30,87 +31,121 @@
 
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden;background:var(--warm)}
+h1,h2,h3,h4{font-family:'Manrope',sans-serif}
 a{text-decoration:none;color:inherit}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;height:56px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;background:var(--navy-dark);border-bottom:1px solid var(--border-dark)}
-.nav-logo{font-size:15px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.nav-logo{font-family:'Manrope',sans-serif;font-size:15px;font-weight:800;color:#fff;letter-spacing:-.01em}
 .nav-links{display:flex;gap:24px}
 .nav-links a{font-size:13px;color:rgba(255,255,255,.6);transition:color .15s;font-weight:500}
 .nav-links a:hover{color:#fff}
-.nav-cta{font-size:13px;font-weight:600;color:#fff;background:var(--teal);padding:7px 18px;border-radius:6px;transition:background .15s}
+.nav-cta{font-size:13px;font-weight:700;color:#fff;background:var(--teal);padding:7px 18px;border-radius:8px;transition:background .15s}
 .nav-cta:hover{background:#0b8a8f}
 
 /* HERO */
 .hero{background:var(--navy-dark);padding:88px 28px 72px;text-align:center}
 .hero-inner{max-width:640px;margin:0 auto}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#fff;line-height:1.12;letter-spacing:-.025em;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--teal-light)}
+.hero-eyebrow{font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:18px}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.025em;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--teal-bright)}
 .hero-sub{font-size:1.05rem;color:rgba(255,255,255,.68);max-width:520px;margin:0 auto 36px;line-height:1.7}
-.hero-btn{display:inline-block;background:var(--teal);color:#fff;font-size:15px;font-weight:600;padding:13px 32px;border-radius:7px;transition:background .15s}
-.hero-btn:hover{background:#0b8a8f}
+.hero-btn{display:inline-block;background:var(--teal);color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;padding:13px 32px;border-radius:8px;transition:background .15s,transform .2s}
+.hero-btn:hover{background:#0b8a8f;transform:translateY(-2px)}
 .hero-note{font-size:12px;color:rgba(255,255,255,.38);margin-top:14px;letter-spacing:.01em}
+
+/* INSIGHT BANNER */
+.insight-wrap{background:var(--teal);padding:28px}
+.insight-inner{max-width:760px;margin:0 auto;text-align:center}
+.insight-inner p{font-family:'Manrope',sans-serif;font-size:clamp(1rem,2.5vw,1.25rem);font-weight:700;color:#fff;line-height:1.45}
+.insight-inner p span{opacity:.8;font-weight:400}
 
 /* STATS */
 .stats-wrap{background:#fff;border-bottom:1px solid var(--border);padding:60px 28px}
 .stats-inner{max-width:960px;margin:0 auto}
 .stats-lead{text-align:center;max-width:600px;margin:0 auto 44px}
-.stats-lead h2{font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.3;margin-bottom:14px}
+.stats-lead h2{font-family:'Manrope',sans-serif;font-size:clamp(1.3rem,3vw,1.75rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.3;margin-bottom:14px}
 .stats-lead p{font-size:15px;color:var(--text-mid)}
 .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .stat-card{background:#fff;padding:36px 28px;text-align:center}
-.stat-number{font-size:2.75rem;font-weight:800;color:var(--teal);letter-spacing:-.04em;line-height:1;margin-bottom:10px}
+.stat-number{font-family:'Manrope',sans-serif;font-size:2.75rem;font-weight:800;color:var(--teal);letter-spacing:-.04em;line-height:1;margin-bottom:10px}
 .stat-label{font-size:14px;font-weight:500;color:var(--text-mid);line-height:1.4}
+
+/* DIRECTIVE EXPLAINER */
+.explainer-wrap{background:var(--warm);padding:72px 28px;border-top:1px solid var(--border)}
+.explainer-inner{max-width:720px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.explainer-inner h2{font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:16px}
+.explainer-inner p{font-size:.97rem;color:var(--text-mid);line-height:1.75;margin-bottom:16px}
+
+/* BEFORE/AFTER */
+.compare-wrap{background:var(--warm-card);padding:72px 28px;border-top:1px solid var(--border)}
+.compare-inner{max-width:860px;margin:0 auto}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.compare-card{border-radius:12px;padding:32px}
+.compare-card.without{background:rgba(180,60,60,.06);border:1px solid rgba(180,60,60,.18)}
+.compare-card.with{background:rgba(13,115,119,.06);border:1px solid rgba(13,115,119,.18)}
+.compare-label{font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.compare-label.without{color:#b43c3c}
+.compare-label.with{color:var(--teal)}
+.compare-card h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:var(--text-dark);line-height:1.3;margin-bottom:10px}
+.compare-card p{font-size:13px;color:var(--text-mid);line-height:1.65}
 
 /* SECTION */
 .section{padding:72px 28px;max-width:960px;margin:0 auto}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
-.section h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px}
+.section h2{font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px}
 .section-sub{font-size:.97rem;color:var(--text-mid);max-width:540px;line-height:1.7;margin-bottom:40px}
 
 /* THREE THINGS */
 .things-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.thing-card{background:var(--warm-card);padding:32px;display:flex;flex-direction:column;gap:12px}
-.thing-num{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);padding:4px 10px;background:rgba(13,115,119,.08);border-radius:4px;align-self:flex-start}
-.thing-card h3{font-size:1rem;font-weight:700;color:var(--text-dark);line-height:1.3}
+.thing-card{background:var(--warm-card);padding:32px;display:flex;flex-direction:column;gap:12px;transition:transform .2s}
+.thing-card:hover{transform:translateY(-2px)}
+.thing-num{font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);padding:4px 10px;background:rgba(13,115,119,.08);border-radius:4px;align-self:flex-start}
+.thing-card h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:var(--text-dark);line-height:1.3}
 .thing-card p{font-size:13px;color:var(--text-mid);line-height:1.65}
 
 /* HARD TRUTHS */
 .truths-wrap{background:var(--navy-dark);padding:72px 28px}
 .truths-inner{max-width:720px;margin:0 auto;text-align:center}
-.truths-inner .section-label{color:var(--teal-light)}
-.truths-inner h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.25;margin-bottom:32px}
-.truths-inner h2 em{font-style:normal;color:var(--teal-light)}
-.truth-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 32px;margin-bottom:16px;text-align:left}
+.truths-inner .section-label{color:var(--teal-bright)}
+.truths-inner h2{font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.25;margin-bottom:32px}
+.truths-inner h2 em{font-style:normal;color:var(--teal-bright)}
+.truth-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 32px;margin-bottom:16px;text-align:left;transition:transform .2s}
+.truth-block:hover{transform:translateY(-2px)}
 .truth-block p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.7}
-.truth-block strong{color:var(--teal-light);font-weight:600}
+.truth-block strong{color:var(--teal-bright);font-weight:600}
 
 /* VALUES SECTION */
 .values-wrap{background:var(--warm-card);padding:72px 28px;border-top:1px solid var(--border)}
 .values-inner{max-width:760px;margin:0 auto;text-align:center}
+.values-inner h2{font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px}
 .values-inner p{font-size:.97rem;color:var(--text-mid);line-height:1.75;max-width:540px;margin:0 auto 32px}
 .values-questions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:36px;text-align:left}
 .vq{background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:18px 20px;font-size:14px;color:var(--text-mid);line-height:1.6;font-style:italic}
-.values-cta{display:inline-block;background:var(--teal);color:#fff;font-size:14px;font-weight:600;padding:12px 28px;border-radius:7px;transition:background .15s}
-.values-cta:hover{background:#0b8a8f}
+.values-cta{display:inline-block;background:var(--teal);color:#fff;font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;padding:12px 28px;border-radius:8px;transition:background .15s,transform .2s}
+.values-cta:hover{background:#0b8a8f;transform:translateY(-2px)}
 .values-note{font-size:12px;color:var(--text-muted);margin-top:12px}
 
 /* CARE SUPPORT */
 .care-section{padding:72px 28px;background:var(--warm);border-top:1px solid var(--border)}
 .care-inner{max-width:760px;margin:0 auto}
-.care-card{background:var(--warm-card);border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;align-items:flex-start;gap:24px}
+.care-section-h2{font-family:'Manrope',sans-serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px}
+.care-card{background:var(--warm-card);border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;align-items:flex-start;gap:24px;transition:transform .2s}
+.care-card:hover{transform:translateY(-2px)}
 .care-card-icon{width:44px;height:44px;border-radius:10px;background:rgba(13,115,119,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .care-card-icon svg{width:22px;height:22px}
-.care-card h3{font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px}
+.care-card h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px}
 .care-card p{font-size:13px;color:var(--text-mid);line-height:1.65;margin-bottom:14px}
-.btn-outline{display:inline-block;font-size:13px;font-weight:600;color:var(--teal);border:1.5px solid var(--teal);padding:7px 18px;border-radius:6px;transition:all .15s}
+.btn-outline{display:inline-block;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;color:var(--teal);border:1.5px solid var(--teal);padding:7px 18px;border-radius:8px;transition:all .15s}
 .btn-outline:hover{background:var(--teal);color:#fff}
 
 /* RESOURCES */
 .resources-section{padding:64px 28px;max-width:760px;margin:0 auto}
+.resources-section h2{font-family:'Manrope',sans-serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px}
 .resources-list{display:flex;flex-direction:column;gap:12px;margin-top:28px}
-.resource-item{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fff;border:1px solid var(--border);border-radius:10px;gap:12px;flex-wrap:wrap}
-.resource-item-left h4{font-size:.95rem;font-weight:600;color:var(--text-dark);margin-bottom:3px}
+.resource-item{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fff;border:1px solid var(--border);border-radius:10px;gap:12px;flex-wrap:wrap;transition:transform .2s}
+.resource-item:hover{transform:translateY(-2px)}
+.resource-item-left h4{font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:700;color:var(--text-dark);margin-bottom:3px}
 .resource-item-left p{font-size:13px;color:var(--text-mid)}
 .resource-link{font-size:13px;font-weight:600;color:var(--teal);white-space:nowrap;transition:opacity .15s}
 .resource-link:hover{opacity:.7}
@@ -133,6 +168,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   .hero{padding:64px 20px 56px}
   .section{padding:52px 20px}
   .stats-grid{grid-template-columns:1fr}
+  .compare-grid{grid-template-columns:1fr}
   .care-card{flex-direction:column}
   .footer-inner{flex-direction:column;text-align:center}
 }
@@ -145,37 +181,44 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   <span class="nav-logo">Quality Death</span>
   <div class="nav-links">
     <a href="#why">Why it matters</a>
+    <a href="#directive">What is a directive</a>
     <a href="#three-things">Where to start</a>
-    <a href="#values">Your values</a>
     <a href="#resources">Resources</a>
   </div>
-  <a href="https://caregoals.com" class="nav-cta">Start the conversation</a>
+  <a href="https://co-op.care/assess" class="nav-cta">Start the conversation</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>A good death is not a failure.<br>It&rsquo;s a <em>plan.</em></h1>
+    <div class="hero-eyebrow">End-of-life planning</div>
+    <h1>Most people have very clear opinions<br>about how they want to die.<br><em>Almost none of them have written it down.</em></h1>
     <p class="hero-sub">
-      Most families aren&rsquo;t unprepared because the situation was impossible.
-      They&rsquo;re unprepared because the conversation never happened.
-      This is where it starts.
+      This is not a morbid website. It is the honest one.
+      A good death is not a failure &mdash; it is a plan. Here is where that plan starts.
     </p>
-    <a href="https://caregoals.com" class="hero-btn">Start the conversation</a>
+    <a href="https://co-op.care/assess" class="hero-btn">Start the conversation with your family</a>
     <p class="hero-note">Free &middot; No account required &middot; Takes about 20 minutes</p>
   </div>
 </section>
+
+<!-- INSIGHT BANNER — the remarkable moment -->
+<div class="insight-wrap">
+  <div class="insight-inner">
+    <p>70% of people say they want to die at home. <span>Only 30% do.</span> The gap is not medical. It is a conversation that never happened.</p>
+  </div>
+</div>
 
 <!-- STATS -->
 <div class="stats-wrap">
   <div class="stats-inner">
     <div class="stats-lead">
-      <h2>75% of Americans say they want to die at home. Only 30% do.</h2>
-      <p>The gap isn&rsquo;t medical. It&rsquo;s a conversation that never happened.</p>
+      <h2>Quality of death is a measurable outcome. The US ranks 43rd.</h2>
+      <p>Not for lack of technology. For lack of honest conversation and documented wishes.</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">75%</div>
+        <div class="stat-number">70%</div>
         <div class="stat-label">want to die at home, on their own terms</div>
       </div>
       <div class="stat-card">
@@ -190,6 +233,44 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   </div>
 </div>
 
+<!-- WHAT IS AN ADVANCE DIRECTIVE -->
+<div class="explainer-wrap" id="directive">
+  <div class="explainer-inner">
+    <div class="section-label">Plain English</div>
+    <h2>What an advance directive actually is</h2>
+    <p>
+      An advance directive is a legal document that tells your medical team what you want &mdash; and what you do not want &mdash; when you cannot speak for yourself. It is not just for the elderly. It is for anyone who has opinions about their own care.
+    </p>
+    <p>
+      It answers two questions: <strong style="color:var(--text-dark)">Who should make decisions for me if I cannot?</strong> And: <strong style="color:var(--text-dark)">What do I want those decisions to be?</strong>
+    </p>
+    <p>
+      It takes about 20 to 30 minutes to complete. It works in all 50 states. It is free to create. The hardest part is starting.
+    </p>
+  </div>
+</div>
+
+<!-- BEFORE/AFTER COMPARISON -->
+<div class="compare-wrap">
+  <div class="compare-inner">
+    <div class="section-label">The difference it makes</div>
+    <h2 style="font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:8px">With a directive on file vs. without one.</h2>
+    <p style="font-size:.97rem;color:var(--text-mid);line-height:1.7">Same family. Same moment of crisis. Two completely different experiences.</p>
+    <div class="compare-grid">
+      <div class="compare-card without">
+        <div class="compare-label without">Without a directive</div>
+        <h3>Your family makes those decisions under duress</h3>
+        <p>In a hospital. In the middle of the night. Under pressure from a medical team that has never met you. They guess at what you would want &mdash; and live with that guess forever.</p>
+      </div>
+      <div class="compare-card with">
+        <div class="compare-label with">With a directive on file</div>
+        <h3>Your wishes guide every clinical decision</h3>
+        <p>The care team knows what you want. Your family knows they are honoring you, not guessing. Every decision reflects what you actually said &mdash; because you said it, in writing, before the crisis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- HARD TRUTHS -->
 <div class="truths-wrap" id="why">
   <div class="truths-inner">
@@ -199,8 +280,8 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
     <div class="truth-block">
       <p>
         <strong>The ICU is 40x more expensive per day than home care.</strong>
-        It&rsquo;s also where most people don&rsquo;t want to be.
-        And it&rsquo;s where most people who didn&rsquo;t plan end up anyway.
+        It is also where most people do not want to be.
+        And it is where most people who did not plan end up anyway.
       </p>
     </div>
 
@@ -226,7 +307,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
       <p>
         <strong>The US ranks 43rd in quality of death.</strong>
         Not because we lack technology. Because we lack honesty.
-        Quality Death is the honest conversation the healthcare system won&rsquo;t have with you.
+        Quality Death is the honest conversation the healthcare system will not have with you.
       </p>
     </div>
   </div>
@@ -236,14 +317,14 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <section class="section" id="three-things">
   <div class="section-label">Where to start</div>
   <h2>Three things families can do.</h2>
-  <p class="section-sub">You don&rsquo;t have to do all of this at once. Start with whatever feels most urgent.</p>
+  <p class="section-sub">You do not have to do all of this at once. Start with whatever feels most urgent.</p>
   <div class="things-grid">
     <div class="thing-card">
       <span class="thing-num">One</span>
       <h3>Document your preferences now</h3>
       <p>
-        An advance directive tells your medical team what you want &mdash; and what you don&rsquo;t want &mdash;
-        when you can&rsquo;t speak for yourself. It takes about 20 minutes to complete.
+        An advance directive tells your medical team what you want &mdash; and what you do not want &mdash;
+        when you cannot speak for yourself. It takes about 20 minutes to complete.
         It works in all 50 states. The hardest part is starting.
       </p>
     </div>
@@ -260,7 +341,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
       <span class="thing-num">Three</span>
       <h3>Give your family permission to honor your wishes</h3>
       <p>
-        The people who love you shouldn&rsquo;t have to guess. A care plan shared with your
+        The people who love you should not have to guess. A care plan shared with your
         family, your proxy, and your care team means that when the moment comes,
         everyone in the room knows exactly what to do.
       </p>
@@ -272,19 +353,19 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <div class="values-wrap" id="values">
   <div class="values-inner">
     <div class="section-label">Your values</div>
-    <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px">What matters to you?</h2>
+    <h2>What matters to you?</h2>
     <p>
-      An advance directive isn&rsquo;t just a legal document. It&rsquo;s a values document.
+      An advance directive is not just a legal document. It is a values document.
       Before you fill out a form, it helps to sit with a few honest questions.
     </p>
     <div class="values-questions">
       <div class="vq">&ldquo;If I could only have one thing at the end of my life, it would be&nbsp;&hellip;&rdquo;</div>
-      <div class="vq">&ldquo;The thing I&rsquo;m most afraid of is not the dying. It&rsquo;s&nbsp;&hellip;&rdquo;</div>
+      <div class="vq">&ldquo;The thing I am most afraid of is not the dying. It is&nbsp;&hellip;&rdquo;</div>
       <div class="vq">&ldquo;Quality of life, to me, means I can still&nbsp;&hellip;&rdquo;</div>
       <div class="vq">&ldquo;I want the people I love to know that I&nbsp;&hellip;&rdquo;</div>
     </div>
-    <a href="https://caregoals.com" class="values-cta">Explore your values at CareGoals</a>
-    <p class="values-note">CareGoals guides you through these questions and turns your answers into a shareable care plan.</p>
+    <a href="https://co-op.care/assess" class="values-cta">Begin the conversation with a care advisor</a>
+    <p class="values-note">co-op.care guides you through these questions and helps turn your answers into a shareable care plan.</p>
   </div>
 </div>
 
@@ -292,7 +373,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <div class="care-section" id="care">
   <div class="care-inner">
     <div class="section-label">Care support</div>
-    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px">When you need more than a document.</h2>
+    <h2 class="care-section-h2">When you need more than a document.</h2>
     <p style="font-size:.97rem;color:var(--text-mid);line-height:1.7;margin-bottom:28px;max-width:540px">
       Good end-of-life care happens at home, with people you trust,
       in the environment where your values can actually be honored.
@@ -313,7 +394,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
           not gig workers. Your advance care plan travels with your care record.
           Your caregiver knows your wishes before they walk in the door.
         </p>
-        <a href="https://co-op.care" class="btn-outline">Learn about co-op.care &rarr;</a>
+        <a href="https://co-op.care/assess" class="btn-outline">Start your free assessment at co-op.care</a>
       </div>
     </div>
   </div>
@@ -322,7 +403,7 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
 <!-- RESOURCES -->
 <section class="resources-section" id="resources">
   <div class="section-label">Honest resources</div>
-  <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;color:var(--text-dark);letter-spacing:-.02em;line-height:1.25;margin-bottom:12px">Places worth knowing.</h2>
+  <h2>Places worth knowing.</h2>
   <p style="font-size:.97rem;color:var(--text-mid);line-height:1.7;margin-bottom:0">
     These are well-regarded, independent resources. We have no financial relationship with any of them.
   </p>
@@ -373,14 +454,14 @@ footer{background:var(--navy-dark);padding:36px 28px;border-top:1px solid var(--
   <div class="footer-inner">
     <div class="footer-left">&copy; 2026 Quality Death &mdash; Part of the SolvingHealth network &mdash; Boulder, CO</div>
     <div class="footer-links">
-      <a href="https://caregoals.com">CareGoals</a>
       <a href="https://co-op.care">co-op.care</a>
+      <a href="https://caregoals.com">CareGoals</a>
       <a href="https://solvinghealth.com">SolvingHealth</a>
       <a href="/privacy">Privacy</a>
     </div>
   </div>
 </footer>
 
-<script src="https://harnesshealth.ai/footer.js" defer></script>
+<script src="https://harnesshealth.ai/footer.js?v=10" data-brand="qualitydeath" data-theme="light" defer></script>
 </body>
 </html>
